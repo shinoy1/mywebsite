@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, html {
+  height: 100%;
+}
+.back {
+  /* The image used */
+  background-image: url('https://www.keralatourism.org/images/hri/large/massage_in_ayurveda_5.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto; /* Center it */
+}
+.back .content2 {
+  position: absolute;
+  font-size: 17px;
+  padding:30px;
+  bottom: 0;
+  background: rgb(0,0,0 ); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 99%; 
+}
+.back2 {
+  margin: 0;
+  background-color: black;
+  background-attachment: fixed;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style> 
+<style>
+#navbar {
+      
+      background-color: rgba(0,0,0,1);
+      position: fixed;
+      top: 0;
+      width: 99%;
+      z-index:1;
+    }
+    #navbar a {
+      display: block;
+      float: left;
+      color: white;
+      font-size: 17px;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown2 {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown2 .dropbtn2 {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+        #navbar a:hover {
+          background-color: #bbb;
+          color:black;
+        }
+        .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        .dropdown2:hover .dropbtn2, .dropbtn2:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        #navbar a.active {
+          background-color: yellow;
+          color:black; 
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        .dropdown-content2 {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #bbb;
+        }
+        .dropdown-content2 a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content2 a:hover {
+          background-color: #bbb;
+        }
+        .show {
+          display: block;
+        }
+        .content {
+          padding: 15px;
+        }
+        .sticky {
+          background-position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        .sticky + .content {
+          padding: 60px;}
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+  .parallax {
+    background-attachment: scroll;
+  }
+  .searchbarheading{
+  text-align: center;
+  color:white;
+}
+.center {
+  opacity: 0.8;
+  color: white;
+  background-color: black;
+  font-size:17px;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+.center2 {
+  opacity: 1;
+  color:white;
+  background-color: white;
+  font-size:15px;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 50%;
+  height: 250px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 50%;
+  }
+}
+.img45 img{
+  border-radius: 50%;
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+  <div id="navbar">
+      <a class="active" href="../index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Travel Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="2-min-summary.html">2 Min Summary</a>
+          <a href="when-to-go.html">When to go</a>
+          <a href="maps&highlights.html">Maps & Highlights</a>
+          <a href="food.html">Food</a>
+          <a href="houseboats.html">Houseboats</a>
+          <a href="spices-and-tea.html">Spices and Tea</a>
+          <a href="Walking.html">Walking</a>
+          <a href="ayurveda.html">Ayurveda</a>
+        </div>
+      </div>
+      <div class="dropdown2">
+        <button class="dropbtn2" onclick="myFunction2()">Destinations
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content2" id="myDropdown2">
+          <a href="Alleppey.html">Alleppey</a>
+          <a href="kochi.html">Cochin</a>
+          <a href="MUNNAR.HTML">Munnar</a>
+          <a href="trivendram.html">Trivandrum</a>
+          <a href="kozhikhode.html">Kozhikode</a>
+          <a href="wayanad.html">Wayanad</a>
+          <a href="kovalam.html">Kovalam</a>
+          <a href="bekal.html">Bekal</a>
+        </div>
+      </div>
+      <a href="#stories">Stories</a>
+      <a href="contact_us.html">Contact us</a>
+    </div>
+  <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn2')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+
+<div class="back">
+  <div class="content2">
+    <h2>AYURVEDA IN KERALA</h2>
+    <p>Ayurveda is an ancient healthcare system that originated in southern India and still thrives in Kerala today. By diagnosing your body’s individual humours – vata, pitta or kapha – it seeks to perfectly balance them through diet, lifestyle and massage, to create a healthy mind, body and spirit and prevent disease. Read on to find out how you can experience Ayurveda on a holiday in Kerala.</p>
+  </div>
+<br><br><br><br>
+<br><br><br><br>
+
+  <h1 class="searchbarheading"><span style="font-size: 80px;">KERALA ROVING</span></h1>
+   
+    <br>
+  <br>
+  
+  <br>
+  <br>
+
+</div>
+<div class="parallax"></div>
+<section class="back2">
+  <br>
+  <div class="center">
+    <h1 style= "text-align:center; font-size: 40px ">AYURVEDA IN KERALA</h1>
+  </div>
+  <div class="center2">
+    <img src="https://www.keralatourism.org/images/hri/large/sarvangadhara_with_oil_ayurveda_therapy_3_189.jpg" alt="food of kerala" width="100%">
+    <h2 style="text-align: center; font-style: oblique; color: black">" MAINTAINING HEALTH THROUGH BALANCE IS AT THE HEART OF AYURVEDA AND, THOUGH THOUSANDS OF YEARS OLD, ITS HOLISTIC APPROACH TO WELLBEING FEELS INCREDIBLY MODERN. " </h2>
+  </div>
+  <div class="center">
+    <p style="padding: 10px">In Sanskrit, Ayurveda means ‘The Science of Life’. As this name suggests, it’s far from just a treat-the-symptoms form of medicine, it’s a complete naturalistic system that takes a holistic approach to life and health. Its emphasis is on maintaining health through balance – in diet, but also lifestyle – so that body, mind and consciousness are all in equilibrium. This may sound very modern, but in fact Ayurvedic knowledge originated in India more than 5,000 years ago, stemming from the ancient Vedic culture. Its teaching was primarily oral, with only some of this knowledge written down a few thousand years ago. Today, Ayurveda thrives in southern India, and particularly in Kerala, where its wisdom and practices are deeply ingrained in Keralan culture.<br><br>
+    In Kerala, seeing an Ayurveda Vaidya (traditional practitioner) has been almost the only option for people seeking healing for centuries. The legendary eight families of vaidyas (known as Ashta vaidyas) and their successors treated the entire state.
+    </p>
+  </div>
+    <div class="center2">
+      
+    <img src="https://www.keralatourism.org/images/hri/large/swedana_234.jpg" alt="boat" width="100%">
+  </div>
+  <div class="center">
+    <h2 style="text-align: center;color: white">Ayurveda explained</h2>
+    <p style="padding: 10px">Anyone who’s had a good day ruined by a testy work email or a post-lunch headache will understand how our physical and mental wellbeing can get nudged towards the unhealthy end of the spectrum very easily. Ayurveda recognises how the balance that all humans need to thrive can be thrown off whack, by both internal and external factors: thoughts, food choices, the seasons and weather, physical trauma, work and family relationships. Ill health and disease are the ultimate expression of this imbalance and disorder. Ayurveda looks to identify what’s causing this imbalance and then works to nullify its effects, restoring a healthy constitution.<br><br>
+    Far from a one-size-fits-all approach to health, Ayurvedic teaching suggests that each individual has a unique combination of physical, mental and emotional characteristics which make up their constitution. It also identifies three basic types of energy – the doshas – present in everyone and everything, known as vata, pitta and kapha. Each individual has a dominant, primary energy (they may be more vata than pitta, for instance), and any major deficiencies in these energies can cause disease and affect how we respond to life.
+<br><br>
+So, if your vata, the energy associated with movement, is out of balance, this can lead to anxiety, but when it’s perfectly balanced it promotes creativity and flexibility. When kapha, the energy that relates to the body’s structure – bones, muscles, tendons – is in balance, individuals are calm and loving, but when out of balance they can be greedy and needy. And when pitta, which relates to the body’s metabolism, is in perfect balance you are understanding and thoughtful, but once this balance is lost it can lead to anger and jealousy. The crucial difference between Ayurveda and Western medicine is that it does not focus on symptoms and disease, it concentrates on wellness and health to prevent disease. Get the balance of energy right, and each individual’s body is more than equipped to defend against illness.
+</p>
+  </div>
+  
+  <div class="center">
+    <h2 style="text-align: center"> AYURVEDIC TREATMENTS</h2>
+  </div>
+    <div class="center2"><img src="https://www.keralatourism.org/images/hri/large/sarvangadhara_with_oil_ayurveda_therapy_1_188.jpg" alt="park" width="100%"></div>
+    <div class="center">
+    <p style="padding: 10px">A full Ayurvedic assessment looks at an individual’s overall health, seeking out the imbalances that are causing illness with lots of questions and observations. Recommendations might include massage – which aims to cleanse the body and restore balance – herbal remedies, and lifestyle and diet changes. A full cleansing program is called a panchakarma.</p>
+  </div>
+  <div class="center">
+    <h2 style="text-align: center">AYURVEDA WHILE IN KERALA</h2>
+  </div>
+  <div class="center2"><img src="https://www.keralatourism.org/images/hri/large/pizhichil_ayurveda_therapy_1_181.jpg" alt="park" width="100%"></div>
+  <div class="center">
+    <p style="padding: 10px">If you’re interested in dipping your toe into this ancient practice, Ayurveda treatments such as massage are widely offered in hotels and guesthouses throughout Kerala, so just ask your holiday company. Tailor made tours here, that have flexibility built in, will be best able to accommodate your request for an Ayurveda treatment, as small group trips tend to run to a fixed and often quite packed itinerary.<br><br>Don’t expect the Western spa experience. Full body massages involve a lot of oil, which is often not scented, and require you to be fully naked. They do leave you feeling incredibly well, though – relaxed but also energised. Another classic Ayurveda healing treatment is shirodhara, which involves a gentle head massage followed by the dripping of a slow stream of warm oil onto the forehead, in alignment with the third eye or anja chakra. It’s a mindful, gentle process but it’s also incredibly oily!<br><br>If you really want to explore Ayurveda, specialist tailor made trips that focus on wellness are available, and typically combine Ayurveda treatments (often two hours a day), with yoga and vegetarian cooking classes. If you’re serious about exploring the health benefits of Ayurveda, and want more than just a massage, this kind of trip is for you and will typically include a consultation with a qualified Ayurvedic doctor, in a centre that has green leaf accreditation, which means it meets the standards set by the Indian government for Ayurvedic centres in Kerala.</p>
+  </div>
+  
+  
+</section>
+<div class="footer" style="background-color:black; opacity:0.9">
+    <br>
+    <br>
+    <br>
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white;">CONTACT US<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:0.5">
+    <p>tarushi.sharma.it.2018@miet.ac.in<br>manvi.deepak.cs.2018@miet.ac.in</p>
+    </div>
+    
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white">WEB DEVELOPER<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:1;padding-left:25%;padding-right:25%">
+      <div class="row">
+  <div class="column2 " style="background-color:black;padding-left:4%;padding-right:4%">
+    <div class="img45">
+    <img src="./images/IMG-20190921-WA0004-02-01.jpeg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>TARUSHI SHARMA</h2>
+  </div>
+  <div class="column2 " style="background-color:black;padding-left:25px;padding-right:25px">
+     <div class="img45">
+    <img src="./images/IMG_20201201_125144373.PORTRAIT-01.COVER (2).jpg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>   MANVI TOMAR     </h2>
+  </div>
+</div>
+    </div>
+</div>
+</body>
+</html>

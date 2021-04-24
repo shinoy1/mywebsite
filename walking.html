@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, html {
+  height: 100%;
+}
+.back {
+  /* The image used */
+  background-image: url('https://www.keralatourism.org/images/hri/large/wagamon_idukki_5_704.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto; /* Center it */
+}
+.back .content2 {
+  position: absolute;
+  font-size: 17px;
+  padding:30px;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  max-width: 95%; 
+}
+.back2 {
+  margin: 0;
+  background-color: black;
+  background-attachment: fixed;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style> 
+<style>
+#navbar {
+      
+      background-color: rgba(0,0,0,1);
+      position: fixed;
+      top: 0;
+      width: 99%;
+      z-index:1;
+    }
+    #navbar a {
+      display: block;
+      float: left;
+      color: white;
+      font-size: 17px;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown2 {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown2 .dropbtn2 {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+        #navbar a:hover {
+          background-color: #FFC0CB;
+          color:black;
+        }
+        .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color:#FFC0CB;
+          color: black;
+        }
+        .dropdown2:hover .dropbtn2, .dropbtn2:focus {
+          background-color:#FFC0CB;
+          color: black;
+        }
+        #navbar a.active {
+          background-color: yellow;
+          color:black; 
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #FA8072;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        .dropdown-content2 {
+          display: none;
+          position: absolute;
+          background-color: #FA8072;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #FA8072;
+        }
+        .dropdown-content2 a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content2 a:hover {
+          background-color: #FA8072;
+        }
+        .show {
+          display: block;
+        }
+        .content {
+          padding: 15px;
+        }
+        .sticky {
+          background-position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        .sticky + .content {
+          padding: 60px;}
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+  .parallax {
+    background-attachment: scroll;
+  }
+  .searchbarheading{
+  text-align: center;
+  color:white;
+}
+.center {
+  opacity: 0.6;
+  color:white;
+  background-color: black;
+  font-size:17px;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+.center2 {
+  opacity: 1;
+  color:black;
+  background-color: white;
+  font-size:15px;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 50%;
+  height: 250px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 50%;
+  }
+}
+.img45 img{
+  border-radius: 50%;
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+  <div id="navbar">
+      <a class="active" href="../index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Travel Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="2-min-summary.html">2 Min Summary</a>
+          <a href="when-to-go.html">When to go</a>
+          <a href="maps&highlights.html">Maps & Highlights</a>
+          <a href="food.html">Food</a>
+          <a href="houseboats.html">Houseboats</a>
+          <a href="spices-and-tea.html">Spices and Tea</a>
+          <a href="Walking.html">Walking</a>
+          <a href="ayurveda.html">Ayurveda</a>
+        </div>
+      </div>
+      <div class="dropdown2">
+        <button class="dropbtn2" onclick="myFunction2()">Destinations
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content2" id="myDropdown2">
+          <a href="Alleppey.html">Alleppey</a>
+          <a href="kochi.html">Cochin</a>
+          <a href="MUNNAR.HTML">Munnar</a>
+          <a href="trivendram.html">Trivandrum</a>
+          <a href="kozhikhode.html">Kozhikode</a>
+          <a href="wayanad.html">Wayanad</a>
+          <a href="kovalam.html">Kovalam</a>
+          <a href="bekal.html">Bekal</a>
+        </div>
+      </div>
+      <a href="#stories">Stories</a>
+      <a href="contact_us.html">Contact us</a>
+    </div>
+  <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn2')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+
+<div class="back">
+  <div class="content2">
+    <h2>WALKING IN KERALA</h2>
+    <p>Hiking through tea and spice plantations, up forested slopes to peaks with views over lakes and distant plains – walking holidays in Kerala are a treat. Paths here are good, distances manageable and there’s no pesky altitude to contend with, making it a perfect destination for walkers of all abilities.</p>
+  </div>
+<br><br><br><br>
+<br><br><br><br>
+
+  <h1 class="searchbarheading"><span style="font-size: 80px;">KERALA ROVING</span></h1>
+   
+    <br>
+  <br>
+  
+  <br>
+  <br>
+
+</div>
+<div class="parallax"></div>
+<section class="back2">
+  <br>
+  <div class="center">
+    <h1 style= "text-align:center; font-size: 40px ">WALKING HOLIDAYS IN KERALA</h1>
+  </div>
+  <div class="center2">
+    <img src="https://www.keralatourism.org/images/hri/large/nelliyampathy_hills_palakkad_74.jpg" alt="food of kerala" width="100%">
+    <h2 style="text-align: center; font-style: oblique; color: green">" THE INDIAN HIMALAYAS PULL IN HARDENED TREKKERS WHO LOVE A STEEP CLIMB AND A SNOW-CAPPED PEAK, BUT WAY DOWN SOUTH, THE QUIET, UNDULATING TRAILS OF KERALA OFFER SOMETHING A LITTLE GREENER AND LESS GRUELLING. " </h2>
+  </div>
+  <div class="center">
+    <p style="padding: 10px">Walking in Kerala remains a bit of a best kept secret, so you won’t find many other walkers here – it’s not yet on the worldwide walking web – but you will meet villagers farming the slopes and may stumble across elephants, deer, endemic wild goats and clouds of butterflies flitting across the trails. Hike through tea estates and spice plantations to open grasslands where the air is cool and the views are long over the emerald landscape.<br><br>
+    To really get off the beaten track, choose a walking tour with point to point trekking over four or five days, that leads you deeper into the landscape than day walks can. You’ll camp each evening, which is a wonderful way to be fully immersed in the scenery. Camping is typically fully serviced, so you won’t be lugging your tent uphill, or cooking either, just soaking up the views and tucking into a tasty Keralan meal after a good day on the trail.
+    </p>
+  </div>
+    <div class="center2">
+      <p style="font-size: 20px; padding: 20px; text-align: center"><b>“Go with an open mind and let your senses be astounded.”</b> – Lisa Brollo in a review of her Kerala walking holiday in India</p>
+    <img src="https://www.keralatourism.org/images/hri/large/thekkady_273.jpg" alt="boat" width="100%">
+  </div>
+  <div class="center">
+    <h2 style="text-align: center;color: black">HIGHLIGHTS OF WALKING IN KERALA</h2>
+    <p style="padding: 10px">Walking holidays in Kerala are run as both small group trips, with no more than 16 people, and tailor made tours. Trip lengths vary from just six days to 16 (although on a tailor made trip you can choose how long you’re away), but if you want to combine walking with game watching in Periyar National Park, a cruise on the backwaters around Allepey in a traditional rice boat and time in beautiful Cochin, you’ll need more than a week.</p>
+  </div>
+  
+  <div class="center">
+    <h2> 1. Mathikettan Shola National Park</h2>
+  </div>
+    <div class="center2"><img src="https://www.keralatourism.org/images/eco-tourism/destinations/mathikettan-shola.jpg" alt="park" width="100%"></div>
+    <div class="center">
+    <p style="padding: 10px">Local environmental activists are to thank for this park, as their campaign helped protect the land from development. It’s home to a range of birds, butterflies and plants, found nowhere else in the world. Elephants are common here, and buffering the park, cardamom, pepper and coffee are grown beneath the forest canopy by villagers. In Santhanpara, on the edge of the park, you can stay in a luxe planter’s bungalow.</p>
+  </div>
+  <div class="center">
+    <h2>2. Meesapulimala Peak</h2>
+  </div>
+  <div class="center2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Meeahapullimala.jpg/1024px-Meeahapullimala.jpg" alt="park" width="100%"></div>
+  <div class="center">
+    <p style="padding: 10px">At 2,630m, Meesapulimala Peak is the second highest mountain in south India and marks the border with neighbouring Tamil Nadu. You can trek up to it through rough shola grassland, perhaps passing the odd herd of wild goats called Nilgiri tahr on the way, until you reach open ridges and the top. From here, there are long, lovely views over the two states. You’ll see the world’s highest tea estate, Kolukkumalai, and the great plains of Tamil Nadu stretching away below. Some treks tackle the peak after a day hiking through the Silent Valley and camping overnight.</p>
+  </div>
+  
+  <div class="center">
+    <h2>3. Munnar</h2>
+  </div>
+  <div class="center2"><img src="https://www.keralatourism.org/images/destination/large/munnar20180720141650_202_1.jpg" alt="park" width="100%"></div>
+  <div class="center">
+    <p style="padding: 10px">Most walking holidays in Kerala visit Munnar, a hill station established in the late 19th century at a cool and fresh 1,600m above sea level. It’s the gateway to the treks and trails that wind through the Western Ghats, surrounded by pretty villages and hills lined with tea plantations. Just to its north is Eravikulam National Park, habitat for the endangered Nilgiri tahr and home to Anamudi Peak, the highest in South India at 2,695m.</p>
+  </div>
+  <div class="center">
+    <h2>4. Papathy Shola</h2>
+  </div>
+  <div class="center2"><img src="https://media.wsimag.com/attachments/8e728306596490ce126e8ac25f1889ca0b6d84ed/store/fill/1230/692/d3ea65079ad3b3a27b4ef63cc646031b58620079d7ccc91e7c8680904587/Monarch-Butterfly.jpg" alt="park" width="100%"></div>
+  <div class="center">
+    
+    <p style="padding:10px">Trek up from Suryanelli and you reach the Papathy Shola ‘Butterfly Forest’, which takes its name from the vast numbers of butterflies that migrate here every October. Here, thick high altitude cloud forests also provide a home for endemic Malabar giant squirrels. On the descent, there are great views of Anaerangal Lake. Meaning ‘the lake where the elephants come down’, it draws herds of elephants out of the forests to graze and drink. It’s fringed by spice plantations farmed by tribal communities.</p>
+  </div>
+  <div class="center">
+    <h2>5. Seven Malai Hills</h2>
+  </div>
+  <div class="center2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Velliangiri_Mountains.jpg/1280px-Velliangiri_Mountains.jpg" alt="park" width="100%"></div>
+  <div class="center">
+    
+    <p>From the tiny village of Nagarmudi outside Munnar you can trek up into the Seven Malai Hills, climbing gradually through tea plantations. As you travel higher, the landscape shifts from tea to cardamom and coffee plantations and then, from the top, there are superb views over Munnar and surrounding villages.
+</p>
+  </div>
+  <div class="center">
+    <h2>6. Silent Valley National Park</h2>
+  </div>
+  <div class="center2"><img src="https://india-tours.com/wildlife/images/wildlife/national-parks/silent-valley-national-park-kerala.jpg" alt="park" width="100%"></div>
+  <div class="center">
+    
+    <p style="padding: 10px">This national park lies in the Nilgri Hills and treks here head upwards through a landscape blanketed with tea plantations, eucalyptus and plane trees to grasslands where there are lovely views over the tea estates below.</p>
+  </div>
+  <div class="center">
+    <h2>7. Vattavada</h2>
+  </div>
+  <div class="center2"><img src="https://www.keralatourism.org/images/destination/large/vattavada_in_idukki20131031123046_372_1.jpg" alt="park" width="100%"></div>
+  <div class="center">
+    
+    <p style="padding: 10px">From traditional toddy bars, surrounded by local workers, to school kids, rushing to the river bank to welcome your arrival, travelling and living aboard a houseboat in Kerala really does open your eyes to the industry and lifestyles of backwater communities, far from tourist hotspots. The longer you spend on board the more you'll recognise how certain times of the day dictate what's happening on the river bank, with time off the boat in homestay accommodation the ideal way to turn mere observance into a much deeper, and more involved, cultural experience.</p>
+    <br>
+    <h2 style="text-align: center;">KERALA WALKING PRACTICALITIES</h2>
+ 
+    <p style="padding:10px">The walking in Kerala is pretty moderate, with good paths and no altitude to contend with, so you don’t need to be a hardened Himalayan trekker to enjoy it. Most organised walking holidays include walks of between 5km and 15km a day, with the odd steep ascent. A guide will lead the walking and on point to point walks there will be porters and cooks, too, providing fully serviced camping.<br><br>The dry season, from late November to March, is the best time to walk in Kerala. Days will be hot and nights warm, with daytime temperatures ranging from 21°C to 30°C. The higher you climb, the cooler it gets, though, with the mercury even dropping to freezing at night, particularly during December and January.</p>
+  </div>
+</section>
+<div class="footer" style="background-color:black; opacity: .9">
+    <br>
+    <br>
+    <br>
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white;">CONTACT US<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:0.5;">
+    <p>tarushi.sharma.it.2018@miet.ac.in<br>manvi.deepak.cs.2018@miet.ac.in</p>
+    </div>
+    
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white">WEB DEVELOPER<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:1;padding-left:25%;padding-right:25%">
+      <div class="row">
+  <div class="column2 " style="background-color:black;padding-left:4%;padding-right:4%">
+    <div class="img45">
+    <img src="./images/IMG-20190921-WA0004-02-01.jpeg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>TARUSHI SHARMA</h2>
+  </div>
+  <div class="column2 " style="background-color:black;padding-left:25px;padding-right:25px">
+     <div class="img45">
+    <img src="./images/IMG_20201201_125144373.PORTRAIT-01.COVER (2).jpg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>   MANVI TOMAR     </h2>
+  </div>
+</div>
+    </div>
+</div>
+</body>
+</html>

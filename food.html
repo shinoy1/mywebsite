@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+<style>
+body, html {
+	font-family: Rubik, sans-serif;
+  height: 100%;
+}
+.back {
+  /* The image used */
+  background-image: url('https://i.pinimg.com/originals/f1/5c/da/f15cda34750f8b13cbe072096843422b.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto; /* Center it */
+  font-family: Spectral, serif;
+}
+.back3 {
+  /* The image used */
+  background-image: url('https://experiencekerala.in/kerala-tourism-blog/wp-content/uploads/2019/10/1-77.jpg');
+
+  /* Full height */
+  height: 85%; 
+  width:70%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto; /* Center it */
+  font-family: Spectral, serif;
+}
+.back .content2 {
+  position: absolute;
+  font-size: 17px;
+  padding:30px;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  max-width: 99%; 
+  font-family: Spectral, serif;
+}
+.back2 {
+  margin: 0;
+  background-color: white;
+  background-attachment: fixed;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Spectral, serif;
+}
+</style> 
+<style>
+#navbar {
+      
+      background-color: rgba(0,0,0,1);
+      position: fixed;
+      top: 0;
+      width: 99%;
+    }
+    #navbar a {
+      display: block;
+      float: left;
+      color: white;
+      font-size: 17px;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown2 {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown2 .dropbtn2 {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+        #navbar a:hover {
+          background-color: #bbb;
+          color:black;
+        }
+        .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        .dropdown2:hover .dropbtn2, .dropbtn2:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        #navbar a.active {
+          background-color: yellow;
+          color:black; 
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        .dropdown-content2 {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #bbb;
+        }
+        .dropdown-content2 a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content2 a:hover {
+          background-color: #bbb;
+        }
+        .show {
+          display: block;
+        }
+        .content {
+          padding: 15px;
+        }
+        .sticky {
+          background-position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        .sticky + .content {
+          padding: 60px;}
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+  .parallax {
+    background-attachment: scroll;
+  }
+  .searchbarheading{
+  text-align: center;
+  padding-top: 200px;
+  color:white;
+ font-family: Spectral, serif;
+}
+.center {
+  opacity: 0.6;
+
+  background-color: #DCDCDC;
+  font-size:17px;
+  margin: auto;
+  width: 70%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ font-family: Spectral, serif;
+}
+.center2 {
+  opacity: 1;
+  background-color: #DCDCDC;
+  font-size:15px;
+  margin: auto;
+  width: 70%;
+  font-family: Spectral, serif;
+}
+
+.clearfix {
+  overflow: auto;
+  padding-left: 45px;
+  padding-right: 45px;
+  color: black;
+  font-size: 17px;
+
+}
+.img2 {
+  margin: auto;
+  margin-left: 20px;
+  float: right;
+  border: 5px solid #555;
+}
+.img3 {
+  margin: auto;
+  margin-right: 20px;
+  float: left;
+  border: 5px solid #555;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 50%;
+  height: 250px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 50%;
+  }
+}
+.img45 img{
+  border-radius: 50%;
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+	<div id="navbar">
+      <a class="active" href="../index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Travel Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="2-min-summary.html">2 Min Summary</a>
+          <a href="when-to-go.html">When to go</a>
+          <a href="maps&highlights.html">Maps & Highlights</a>
+          <a href="food.html">Food</a>
+          <a href="houseboats.html">Houseboats</a>
+          <a href="spices-and-tea.html">Spices and Tea</a>
+          <a href="walking.html">Walking</a>
+          <a href="ayurveda.html">Ayurveda</a>
+        </div>
+      </div>
+      <div class="dropdown2">
+        <button class="dropbtn2" onclick="myFunction2()">Destinations
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content2" id="myDropdown2">
+          <a href="Alleppey.html">Alleppey</a>
+          <a href="kochi.html">Cochin</a>
+          <a href="MUNNAR.HTML">Munnar</a>
+          <a href="trivendram.html">Trivandrum</a>
+          <a href="kozhikhode.html">Kozhikode</a>
+          <a href="wayanad.html">Wayanad</a>
+          <a href="kovalam.html">Kovalam</a>
+          <a href="bekal.html">Bekal</a>
+        </div>
+      </div>
+      <a href="#stories">Stories</a>
+      <a href="contact_us.html">Contact us</a>
+    </div>
+  <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn2')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+
+<div class="back">
+	<div class="content2">
+		<h1 style="margin: 0px">FOOD IN KERALA</h1>
+		<p>The food in Kerala is as big a highlight as its green hills, coast and wonderful wildlife. Its mellow flavours and nutritious ingredients have seduced many a hungry traveller, and everywhere you travel you'll see the fresh produce that will end up on your plate that evening, from coconuts and mangos, to fresh fish and exotic spices.</p>
+	</div>
+  	<h1 class="searchbarheading"><span style="font-size: 80px;">KERALA ROVING</span><br><br><span style="font-size:50px;">CUISINE OF KERALA</span></h1>
+	<br><br><br>
+</div>
+
+<div class="parallax">
+
+<section class="back2">
+  
+<div class="center">
+	<h1 style= "text-align:center; font-size: 40px;padding-top: 30px ">KERALA CUISINE</h1>
+</div>
+<div class="center2">
+	<img src="./images/My Post (1).jpg" alt="food of kerala" height="80%" width="100%">
+    <p style="font-size: 30px; text-align: center; font-family: Sofia, sans-serif; color: slateblue; padding: 15px;"  class="font-effect-outline"> " Coast, Backwaters And cool hill country – KERALA’S Geography explains its diverse and delicious cuisine, characterised by SEAFOOD AND SPICES, RICE, COCONUT AND SIMPLE VEGGIES. " </p>
+    <p style="padding: 18px; font-size: 20px">Though small, Kerala is a perfectly formed package of beautiful landscapes, big beaches, exotic wildlife and colonial history, but read any reviews of holidays here and another highlight gets raved about again and again – THE FOOD! <br>Travellers wax lyrical about the crisp dosas loaded with potato curry served up for breakfast, the fresh seafood simmered in coconut milk, and the epic celebration sadhya meals of rice and numerous tiny, tempting portions of curry, dhal, pickles and pappadams.</p>
+    <hr><h1 style="text-align: center;color: black; font-size: 40px">Fish</h1>
+    <img src="http://i1.ytimg.com/vi/aWKwARJJxX4/maxresdefault.jpg" alt="fish" width="100%">
+    <p style="padding-left: 25px; padding-right: 25px">Fish is served everywhere around the coast and backwaters of Kerala, with both freshwater and sea varieties on the menu. Often it’s served in a spicy pollichathu style, flavoured with curry leaves, lime juice, onions, garlic, ginger and spices, and then fried. Or you might find it simmering in a bath of coconut milk and mango curry sauce. Kerala’s seafood is superb, too. Jhinga kachcia aam kari is a speciality made with green mango and prawns cooked in coconut milk and spices. There are also Goan-Portuguese seafood classics like peixe recheado which is grilled, spice-stuffed fish, a legacy of Portugal’s colonisation of India’s west coast.<br><br>In Kochi, you can see the unusual Chinese nets that local fishermen use, operated from the shore. The nets are strung across bamboo and teak poles which are lowered into the sea, counter-weighted by large stones tied to ropes. On the footpath behind the Chinese nets are several fishmongers, where you can buy the just-caught fish, prawns and lobster, then take it to one of the nearby outdoor restaurants to have it cooked and served for a small extra fee.</p>
+    <br><hr>
+    <h2 style="text-align: center;color: black; font-size: 40px"> Brilliant Breakfast</h2>
+    <p style="padding-left: 25px; padding-right: 25px">While bland, Western-style hotels in Kerala will offer up the predictable trio of toast-butter-jam, an authentic Keralan breakfast is way more exciting, nutritious and savoury. Here are some of its classic dishes, fantastic for breakfast but delicious any time of the day.</p>
+    <div class="clearfix">
+    	<img class="img2" src="https://vanitascorner.com/wp-content/uploads/2018/01/appam-and-curry.jpg" alt="appam" width="260px" height="190px"><h2 style="margin:0px"><br>APPAM</h2>Appam is a Keralan staple, made with a fermented rice flour batter and coconut milk. It’s a thin pancake with a pillowy centre, typically served with a simple vegetable curry. There are lots of variations on the classic appam, including one with an egg cooked on it, which is the same as the Sri Lankan hopper.
+	</div><hr>
+  	<div class="clearfix">
+    	<img class="img3" src="https://thumbs.dreamstime.com/b/south-indian-breakfast-idli-chutney-48378225.jpg" alt="idli" width="260px" height="190px"><br><br><br><h2 style="margin:0px">IDLI</h2>Idli are savoury rice cakes, which look like little white flying saucers, made by steaming a batter of fermented black lentils and rice. They are pretty bland on their own, so for breakfast you’ll find them served with lentil stew or chutneys.
+	</div><hr>
+    <div class="clearfix">
+    	<img class="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpz-pRU5IcB_86HN4-lUxp4KiNmGnYaiSfFXXPyluUp8Dd2nhBlUWepjXaZfC_v3TlJL4&usqp=CAU" alt="puttu" width="260px" height="190px"><br><br><br><h2 style="margin:0px">PUTTU</h2>Puttu might sound cute but they look more like giant rolled up white flannels. They are made from steamed rice formed into cylinder shapes, usually served with kadala, a black chickpea curry.
+    </div><hr>
+    <div class="clearfix">
+      <img class="img3" src="https://media.istockphoto.com/photos/masala-dosa-on-banana-leaf-with-both-sambar-and-coconut-chutney-south-picture-id1205482290?k=6&m=1205482290&s=612x612&w=0&h=nqogWP3JEiDgFOynkxSzRD7NjYjvqljFvQOqtRR_O5M=" alt="dosa" width="260px" height="190px"><br><br><h2 style="margin:0px">DOSA</h2>Dosa is also made of fermented batter and looks more like a crispy pancake. Its main ingredients are rice and black gram (a type of bean) ground together to create a smooth batter, then cooked on a hotplate, crepe-style. It’s typically served with sambar (lentil and vegetable stew), chutneys and a potato stuffing.
+    </div><br>
+
+</div>
+</section>
+
+</div>
+<div class="back3">
+	<h1 class="searchbarheading"><span style="font-size: 75px;">INFLUENCES<br>AND<br>SPECIALITIES</span></h1>
+</div>
+<section class="back2">
+	<div class="center2"><br>
+		<h2 style="text-align: center;color: black; font-size: 40px"> Syrian Christian dishes</h2>
+		<p style="padding-left: 25px; padding-right: 25px; font-size: 18px">These dishes are traditional to the community of Syrian or Saint Thomas Christians living in Kerala since the first century AD. Many have now found their way into mainstream Keralan cooking, including karimeen, or pearl spot fish. This speckled freshwater fish, which lives in the Keralan backwaters, is traditionally a Syrian Christian delicacy and it’s typically marinated in a mixture of lemon juice, red chillies and spices before being wrapped in plantain leaves and baked.</p>
+		<img src="https://i.ytimg.com/vi/Xna1R9f_0bY/maxresdefault.jpg" width="100%">
+		<p style="padding-left: 30px; padding-right: 30px; font-size: 20px"><span style="font-weight: bolder; font-size: 25px;">Fish molee</span> is another Syrian Christian speciality, made in a traditional manchatti (earthenware pot). Fish such as kingfish or seer fish is first marinated in lemon juice, salt and chilli, then lightly fried and stewed in coconut milk and spices including turmeric, pepper, cinnamon and cloves. Green chillies are added to produce a flavour that is both tangy and hot.</p><hr>
+		<h2 style="text-align: center;color: black; font-size: 40px"> Malabar Cooking</h2>
+		<img src="http://www.fwdlife.in/wp-content/uploads/2018/05/chattipathiri-image-1.jpg" height="600px" width="100%">
+		<p style="padding-left: 30px; padding-right: 30px; font-size: 20px">The Malabar region lies in the northern part of Kerala, above the River Bharathapuzha, and it’s contributed some tasty dishes to Keralan cuisine. One simple example is the <b>parotta/paratta</b>, a classic street food flatbread. Balls of flour dough are rolled thin, pulled into strips and then curled up. The curled rolls are then rolled out again and cooked on a hot plate, with a splash – literally – of oil, producing a layered flatbread with a flaky, crispy texture. Chicken cooked in coconut milk is another Malabar classic, as is <b>chatti pathiri</b>, a layered pastry dish that can be sweet or savour.</p><hr>
+		<h2 style="text-align: center;color: black; font-size: 40px"> Sadhya</h2>
+		<img src="https://media.gettyimages.com/photos/onam-sadya-picture-id152409347?k=6&m=152409347&s=612x612&w=0&h=3rW-gEvSjcPeJ2UHEvOHdwo78zHgWOlk8YlHLi-bXU4=" height="550px" width="100%">
+		<p style="padding-left: 30px; padding-right: 30px; font-size: 20px">This celebration meal is served on a banana leaf, and is traditionally eaten by every Keralan during the spring harvest festival of Onam, as well as on other special occasions during the year. A portion of rice is accompanied by at least 10 mini dishes and dollops of deliciousness, all vegetarian, providing an extraordinary array of tastes. You’ll find curries, sambals, pickles and chutneys, as well as small portions of crisp pappadam and servings of sweet kheer and spiced buttermilk. Each taste is balanced following the principles of Ayurveda, promoting equilibrium and a sense of well-being in mind and body.<br></p><br>
+	</div>
+</section>
+<div class="footer" style="background-color:black">
+    <br>
+    <br>
+    <br>
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white;">CONTACT US</h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:0.5">
+    <p>tarushi.sharma.it.2018@miet.ac.in<br>manvi.deepak.cs.2018@miet.ac.in</p>
+    </div>
+    
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white">WEB DEVELOPER</h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:1;padding-left:25%;padding-right:25%">
+      <div class="row">
+  <div class="column2 " style="background-color:black;padding-left:4%;padding-right:4%">
+    <div class="img45">
+    <img src="./images/IMG-20190921-WA0004-02-01.jpeg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>TARUSHI SHARMA</h2>
+  </div>
+  <div class="column2 " style="background-color:black;padding-left:25px;padding-right:25px">
+     <div class="img45">
+    <img src="./images/IMG_20201201_125144373.PORTRAIT-01.COVER (2).jpg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>MANVI TOMAR</h2>
+  </div>
+</div>
+    </div>
+</div>
+
+
+</body>
+</html>

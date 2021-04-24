@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, html {
+  height: 100%;
+}
+
+.back {
+  /* The image used */
+  background-image: url('https://travelflavel.files.wordpress.com/2017/03/dsc_0579.jpg?w=768');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto; /* Center it */
+}
+.back .content2 {
+  position: absolute;
+  font-size: 15px;
+  padding:30px;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  max-width: 99%; 
+}
+.back2 {
+  margin: 0;
+  background-color: white;
+  background-attachment: fixed;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style> 
+<style>
+#navbar {
+      
+      background-color: rgba(0,0,0,1);
+      position: fixed;
+      top: 0;
+      width: 99%;
+      z-index: 1;
+    }
+    #navbar a {
+      display: block;
+      float: left;
+      color: white;
+      font-size: 17px;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown2 {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown2 .dropbtn2 {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+        #navbar a:hover {
+          background-color: #bbb;
+          color:black;
+        }
+        .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        .dropdown2:hover .dropbtn2, .dropbtn2:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        #navbar a.active {
+          background-color: yellow;
+          color:black; 
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        .dropdown-content2 {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #bbb;
+        }
+        .dropdown-content2 a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content2 a:hover {
+          background-color: #bbb;
+        }
+        .show {
+          display: block;
+        }
+        .content {
+          padding: 15px;
+        }
+        .sticky {
+          background-position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        .sticky + .content {
+          padding: 60px;}
+        </style>
+        <style>
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+  .parallax {
+    background-attachment: scroll;
+  }
+  .searchbarheading{
+  text-align: center;
+  color: black;
+}
+.center {
+  opacity: 0.6;
+  padding:10px;
+  background-color: #DCDCDC;
+  font-size:17px;
+  margin: auto;
+  width: 60%;
+}
+.center2 {
+  opacity: 1;
+  padding:10px;
+  background-color: #DCDCDC;
+  font-size:17px;
+  margin: auto;
+  width: 60%;
+
+}
+img.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 18%;
+  float: left;
+}
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 500px;
+  width: 100%;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height: 500px;
+  width: 100%;
+}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 50%;
+  height: 250px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 50%;
+  }
+}
+.img45 img{
+  border-radius: 50%;
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+	<div id="navbar">
+      <a class="active" href="../index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Travel Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="2-min-summary.html">2 Min Summary</a>
+          <a href="when-to-go.html">When to go</a>
+          <a href="maps&highlights.html">Maps & Highlights</a>
+          <a href="food.html">Food</a>
+          <a href="houseboats.html">Houseboats</a>
+          <a href="spices-and-tea.html">Spices and Tea</a>
+          <a href="Walking.html">Walking</a>
+          <a href="ayurveda.html">Ayurveda</a>
+        </div>
+      </div>
+      <div class="dropdown2">
+        <button class="dropbtn2" onclick="myFunction2()">Destinations
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content2" id="myDropdown2">
+          <a href="Alleppey.html">Alleppey</a>
+          <a href="kochi.html">Cochin</a>
+          <a href="MUNNAR.HTML">Munnar</a>
+          <a href="trivendram.html">Trivandrum</a>
+          <a href="kozhikhode.html">Kozhikode</a>
+          <a href="wayanad.html">Wayanad</a>
+          <a href="kovalam.html">Kovalam</a>
+          <a href="bekal.htm">Bekal</a>
+        </div>
+      </div>
+      <a href="#stories">Stories</a>
+      <a href="contact_us.html">Contact us</a>
+    </div>
+  <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn2')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+
+<div class="back">
+	<div class="content2">
+		
+		<p>Kerala’s map and highlights of places to see covers a glorious gamut of temples and trekking, backwaters and beaches, spices and cycling , tigers and tea plantations. Kerala is kid heaven, cycling perfection and a haven for hikers. Think of it like a box full of spices, with every possible flavour you can imagine.</p>
+	</div>
+<br><br><br><br>
+<br><br><br><br>
+
+  <h1 class="searchbarheading"><span style="font-size: 80px;">KERALA ROVING</span></h1>
+    <h2 class="searchbarheading"><span style="font-size:50px;">Kerala Map & Highlights</span></h2><br>
+    <br>
+  <br>
+  
+  <br>
+  <br>
+
+</div>
+<br>
+<br>
+<br>
+<div class="parallax"></div>
+<section class="back2">
+
+  
+
+  <div class="center">
+    <h1 style= "text-align:center; font-size: 40px ">Where to go in Kerala</h1>
+    <p style="padding: 20px">When you are working out where to go in Kerala, it helps to think of it like a well-stocked spice rack. Some are just basics and musts for every recipe. Such as the backwaters of Alleppey, or the old town at Fort Cochi. Others must only be used fresh and thrown in at the last minute, like a hiking trip up to the waterfalls of the Western Ghats, as soon as the monsoon has ended, when everything is aromatic and deliciously verdant. Ginger is revitalizing and awakens the palette, just like the Ayurvedic way of life that underpins much of Keralite’s wellbeing. And pepper, the most famous of all, represents the stimulating multi-cultural influences dotted all over this vibrant outward looking region of India. Just don’t put them all in at once, but savour them slowly, following a good recipe for responsible tourism.</p>
+  </div>
+  <div class="center2">
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=kerala,%20india&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      <a href="https://putlocker-is.org"></a>
+      <br>
+      <a href="https://www.embedgooglemap.net"></a>
+    </div>
+  </div>
+  <br>
+  <img src="./images/Screenshot 2021-03-28 140624.jpg" alt="allepey" width="100%">
+   <img src="./images/Screenshot 2021-03-28 161139.jpg" alt="allepey" width="100%">
+    <img src="./images/Screenshot 2021-03-28 161452.jpg" alt="allepey" width="100%">
+    <img src="./images/Screenshot 2021-03-28 161714.jpg" alt="allepey" width="100%">
+    <img src="./images/Screenshot 2021-03-28 161838.jpg" alt="allepey" width="100%">
+    <img src="./images/Screenshot 2021-03-28 161937.jpg" alt="allepey" width="100%">
+    <img src="./images/Screenshot 2021-03-28 162039.jpg" alt="allepey" width="100%">
+    <img src="./images/Screenshot 2021-03-28 162127.jpg" alt="allepey" width="100%">
+    <img src="./images/Screenshot 2021-03-28 162214.jpg" alt="allepey" width="100%">
+    <img src="./images/Screenshot 2021-03-28 162307.jpg" alt="allepey" width="100%">
+    <img src="./images/Screenshot 2021-03-28 162400.jpg" alt="allepey" width="100%">
+    <img src="./images/Screenshot 2021-03-28 162454.jpg" alt="allepey" width="100%">
+  </div>
+</section>
+  <h1 style="text-align: center;">KERALA ITINERARIES</h1>
+<div class="center">
+  <h3>10 day cycling itinerary.</h3>
+  <p>Kochi > Thattekkad > Adimali > Munnar > Suryanelli > Periyar National Park > Vagamon > Thodupuzha > Kumarakom > Alleppey > Kochi</p>
+  <h3>14 day cultural tour</h3>
+  <p>Kochi > Munnar > Thekkady > Alleppey > Kumarakom > Kollam > Varkala > Trivandrum > Kochi</p>
+  <h3>10 days classic Kerala</h3>
+  <p>Kochi > Munnar > Alleppey > Periyar > Marari > Kochi</p>
+</div>
+<div class="center2">
+<h1 style="text-align: center;">Drive in Kerala</h1>
+<img src="https://i.pinimg.com/originals/fc/b9/d8/fcb9d8757c05069765835bdfc9a6e051.jpg" alt="drive" width="100%">
+<p>The following times give you a rough idea of the driving times between the main attractions in Kerala:</p>
+<ul>
+  <li>Kochi - Munnar: 4 hours by car</li>
+  <li>Kochi to Periyar National Park: 5 hours by car</li>
+  <li>Alleppey to Periyar National Park: 4 hours by car</li>
+  <li>Kochi to Kozhikode: 5 hours by car</li>
+  <li>Alleppey to Kozhikode: 5 hours by train</li>
+</ul>
+
+<p>
+</p>
+</div>
+<div class="footer" style="background-color:black">
+    <br>
+    <br>
+    <br>
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white;">CONTACT US<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:0.5">
+    <p>tarushi.sharma.it.2018@miet.ac.in<br>manvi.deepak.cs.2018@miet.ac.in</p>
+    </div>
+    
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white">WEB DEVELOPER<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:1;padding-left:25%;padding-right:25%">
+      <div class="row">
+  <div class="column2 " style="background-color:black;padding-left:4%;padding-right:4%">
+    <div class="img45">
+    <img src="./images/IMG-20190921-WA0004-02-01.jpeg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>TARUSHI SHARMA</h2>
+  </div>
+  <div class="column2 " style="background-color:black;padding-left:25px;padding-right:25px">
+     <div class="img45">
+    <img src="./images/IMG_20201201_125144373.PORTRAIT-01.COVER (2).jpg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>   MANVI TOMAR     </h2>
+  </div>
+</div>
+    </div>
+</div>
+</body>
+</html>

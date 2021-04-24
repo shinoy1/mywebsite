@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>kozhikode </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#navbar {
+      
+      background-color: black;
+      position: fixed;
+      top: 0;
+      width: 98.95%;
+      opacity: 1;
+      z-index:1;
+    }
+    #navbar a {
+      display: block;
+      float: left;
+      color: white;
+      font-size: 17px;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown2 {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown2 .dropbtn2 {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+        #navbar a:hover {
+          background-color: #bbb;
+          color:black;
+        }
+        .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        .dropdown2:hover .dropbtn2, .dropbtn2:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        #navbar a.active {
+          background-color: yellow;
+          color:black; 
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        .dropdown-content2 {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #bbb;
+        }
+        .dropdown-content2 a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content2 a:hover {
+          background-color: #bbb;
+        }
+        .show {
+          display: block;
+        }
+        .content {
+          padding: 15px;
+        }
+        .sticky {
+          background-position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        .sticky + .content {
+          padding: 60px;}
+</style>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url("https://www.gozocabs.com/blog/wp-content/uploads/2018/04/Kozhikode-beach.jpg");
+  background-color: #cccccc;
+  height:615px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  
+}
+.texte{
+padding-left: 15%;
+padding-right:15%;
+  margin: 0;
+ background-color: black;
+}
+.img {
+  margin: auto;
+  margin-left: 10px;
+  float: right;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+.center3 {
+  opacity: 1;
+  background-color: #F8F8FF;
+  font-size:17px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+.center4 {
+  opacity: 0.6;
+  background-color: #F8F8FF;
+  font-size:17px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 25px;
+  right: 40px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 50px;
+  color: white;
+}
+.clearfix {
+  overflow: auto;
+  padding: 20px;
+  color: black;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: auto;
+  min-height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+}
+.left2 {
+  width: 60%;
+}
+
+.right2 {
+  width: 40%;
+}
+.left3 {
+  width: 50%;
+}
+
+.right3 {
+  width: 50%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 50%;
+  height: 250px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 50%;
+  }
+}
+.img45 img{
+  border-radius: 50%;
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+  <div id="navbar">
+      <a class="active" href="../index.html">Home</a>
+      <div class="dropdown2">
+        <button class="dropbtn2" onclick="myFunction2()">Travel Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content2" id="myDropdown2">
+          <a href="2-min-summary.html">2 Min Summary</a>
+          <a href="when-to-go.html">When to go</a>
+          <a href="maps&highlights.html">Maps & Highlights</a>
+          <a href="food.html">Food</a>
+          <a href="houseboats.html">Houseboats</a>
+          <a href="spices-and-tea.html">Spices and Tea</a>
+          <a href="Walking.html">Walking</a>
+          <a href="ayurveda.html">Ayurveda</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Destinations
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Alleppey.html">Alleppey</a>
+          <a href="kochi.html">Cochin</a>
+          <a href="MUNNAR.HTML">Munnar</a>
+          <a href="trivendram.html">Trivandrum</a>
+          <a href="kozhikhode.html">Kozhikode</a>
+          <a href="wayanad.html">Wayanad</a>
+          <a href="kovalam.html">Kovalam</a>
+          <a href="bekal.html">Bekal</a>
+        </div>
+      </div>
+      <a href="#stories">Stories</a>
+      <a href="#contact">Contact us</a>
+    </div>
+     <script>
+    /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn2')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:70px;">KOZHIKODE</h1>
+    <h3 style="opacity: 0.7">Kozhikode , also known as Calicut, is an Indian city, second-largest urban agglomeration in the State of Kerala in India and 19th largest in the country with a population of two million according to 2011 census.Kozhikode is classified as a Tier 2 city according to Government of India..</h3>
+  </div>
+</div>
+<div class="space" style=" background-color: #F8F8FF;opacity:0.6">
+<br>
+</div>
+<section class="texte"> 
+<div class="center4">
+  <br>
+  <h1 style="text-align: center; font-size: 40px ">PLACES TO VISIT KOZHIKODE</h1>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://www.holidify.com/images/compressed/attractions/attr_2345.jpg" alt="water" width="100%" >
+    <div class="bottom-right"><b>Backwaters in Kozhikode</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px;padding-left:20px">
+<p>Located on the northern side of the scenic state of Kerala, Kozhikode has always been a popular destination for its backwaters. These backwaters are a distinctive feature of this area and have been generously blessed with abundant natural beauty, dense greenery and exotic flora and fauna. The palm-fringed rivulets, lakes and canals of Kozhikode are decked with engaging beauty. The calm of these undisturbed waters is contagious and instils within you a feeling of tranquil peace and serenity. 
+
+</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://yometro.com/images/places/beypore-beach.jpg" alt="beach" width="100%" >
+    <div class="bottom-right"><b>Beypore</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>A perfect hideout from the chaos and monotony of the urbanity. Located at a distance of 11 km from Kozhikode at the mouth of River Chaliyar. Beypore Beach used to be an important fishing harbor of Erstwhile India and is well known for its 1500 years old shipbuilding yard. Bound by clear skies above, lined by golden sandy beaches and dotted by tall coconut this is a happening vacation destination in Kerala. One can immerse in the beauty by enjoying long walks along its shimmering sandy beaches, swimming in its shallow waters, pampering oneself at ayurvedic massage centers, and indulging in adventure sports. There are several eateries serving specialties to pamper one's taste buds.</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://yometro.com/images/places/calicut-planetarium.jpg" alt="theater" width="100%" >
+    <div class="bottom-right"><b>Calicut Planetarium</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>Situated in the JafferKhan Colony in Kozhikode the Regional Science Centre and Planetarium in Kozhikode aspires to propagate science, spread awareness through active interaction and participation. Equipped with a projection system from Carl Zeiss in Germany, a 250 seater capacity, a high definition 3D theatre the planetarium hosts as many as 1200 shows yearly facilitating the science enthusiasts to explore the secrets of the universe. It houses three permanent galleries that display numerous experiments and models intending to nurture the willingness to know the science behind the scenes. Other amenities include children’s activity nook, a well-stocked library, an aquarium, and a telescope corner.</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://yometro.com/images/places/kozhikode-beach.jpg" alt="beach" width="100%" >
+    <div class="bottom-right"><b>Kozhikode Beach</b></div>  
+</div>
+  </div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>The unmatched beauty of the beach captivates one and all. It is an exemplar of the essence of Kozhikode and this is what makes it unique. Located at a distance of 3kms from the railway station in the town area it is a hot spot of activity for locals and tourists alike. The beach served as a port in the yesteryears and bears vestiges of the colonial era in the form of two piers and a lighthouse. The beauty of the place enhances manifold during the sunrise and sunset hours. Other attractions here include a Dolphin Point, where dolphins indulging in playful activity can be spotted effortlessly, eateries, local bazaar, kid's park, interesting statues, and a Marine aquarium.</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://yometro.com/images/places/kozhippara-falls.jpg" alt="waterfall" width="100%" >
+    <div class="bottom-right"><b>Kozhippara Falls</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>The enchanting waterfall is located on the Chokkad stream in high ranges of Malappuram located near Kozhippara. It is an apt destination for those seeking a quick escape. The mellifluous sound of the water falling from the cascade and the sheath of mist enwrapping the view together creates an ethereal effect. It remains surrounded by lush green panoramic views, dense forests, captivating landscape. It attracts several adventure enthusiasts, rock climbers trekkers, and bird watchers. It is an ideal location to spot exotic species of birds and animals. It is believed that the Kuthradampuzha River, flowing in this region has revitalizing qualities and can cure skin ailments..</p>
+</div>
+<div class="center4">
+  <br>
+  <h1 style="text-align: center; font-size: 40px ">THINGS TO DO IN KOZHIKODE</h1>
+</div>
+<div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <h2> Visit Elathur</h2><p>Located at about 12 km North from the city of Kozhikode lies a quaint village in picturesque surroundings. Bound by a lake on one side, and a river on the other, Elathur is well connected by road and rail. The place is ideal for visitors who want to unwind while soaking their spirits in the beauty of nature. It is a gastronome's paradise. Acclaimed for its savory seafood, including crabs, lobsters, freshwater fishes, mussels, and local palm drink toddy it presents a complete beachside experience.</p>
+  </div>
+  <div class="column right" style="background-color:#bbb;">
+     <img src="https://yometro.com/images/places/elathur.jpg" alt="COFFEE CUP" width="100%" height="290px">
+  </div>
+</div>
+<div class="row">
+  <div class="column left2" style="background-color:#aaa;">
+    <h2> Visit Lion's Park</h2>
+    <p>Located next to the popular lighthouse on the Kozhikode Beach, this children's theme & amusement park is a sought after family vacation destination. Also known as Calicut's Beach Garden, it is an idyllic place to break the humdrum. Since the park is located very close to the beach it offers a glimpse of a tranquil and peaceful shoreline, blissful sunrise, and sunsets. It is a perfect spot for those who want to laze around admiring the beauty of nature.</p>
+  </div>
+  <div class="column right2" style="background-color:#bbb;">
+     <img src="https://yometro.com/images/places/lions-park.jpg" alt="lion pic" width="100%" height="290px">
+  </div>
+</div>
+<div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <h2>Visit Sargaalaya Kerala Arts</h2>
+    <p>Sargaalaya, the Kerala Arts and Crafts village is one of its kind initiatives by the Department of Tourism, Government of Kerala. The craft village was set with a clear objective of displaying and promoting the exquisite craftsmanship of the artisans of the state. Located in the picturesque village of Iringal it has 60 beautiful cottages, each housing a stall. Highly skilled artisans from around 20 villages have been brought under the same roof to combine the streams of art and business. </p>
+  </div>
+  <div class="column right" style="background-color:#bbb;">
+     <img src="https://yometro.com/images/places/sargaalya-kerela-art.jpg" alt="houses pic" width="100%" height="290px">
+  </div>
+</div>
+<div class="row">
+  <div class="column left2" style="background-color:#aaa;">
+    <h2>Sight Seeing at Vellari Mala</h2>
+    <p>Vellari Mala is a mountain range in Kerala stretching across Thiruvambady Panchayat in Kozhikode district and Meppadi Panchayat in Wayanad district. Situated near Thusharagiri in Kozhikode district Vellari Mala is yet another picture-perfect spot. It is a trekker's paradise and river Kanjirapuzha, a tributary of the River Chaliyar, meanders through the rocky terrain imparting it a breathtaking view. Set with several gurgling waterfalls, babbling brooks meandering through the rocky terrains, vibrant green landscapes it serves as an ideal dwelling for one to rejuvenate and douse in the unparalleled beauty. A visit to vellari mala undoubtedly turns out to be an unforgettable experience.</p>
+  </div>
+  <div class="column right2" style="background-color:#bbb;">
+     <img src="https://yometro.com/images/places/vellari-mala.jpg" alt="beach pic" width="100%" height="290px">
+  </div>
+</div>
+
+</section>
+
+ <div class="footer" style="background-color:black;opacity: .9">
+    <br>
+    <br>
+    <br>
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white;">CONTACT US<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:0.5;">
+    <p>tarushi.sharma.it.2018@miet.ac.in<br>manvi.deepak.cs.2018@miet.ac.in</p>
+    </div>
+    
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white">WEB DEVELOPER<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:1;padding-left:25%;padding-right:25%">
+      <div class="row">
+  <div class="column2 " style="background-color:black;padding-left:4%;padding-right:4%">
+    <div class="img45">
+    <img src="./images/IMG-20190921-WA0004-02-01.jpeg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>TARUSHI SHARMA</h2>
+  </div>
+  <div class="column2 " style="background-color:black;padding-left:25px;padding-right:25px">
+     <div class="img45">
+    <img src="./images/IMG_20201201_125144373.PORTRAIT-01.COVER (2).jpg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>   MANVI TOMAR     </h2>
+  </div>
+</div>
+    </div>
+</div>
+</body>
+</html>

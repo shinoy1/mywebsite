@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, html {
+  height: 100%;
+}
+.back {
+  /* The image used */
+  background-image: url('https://c1.wallpaperflare.com/preview/732/648/952/kathakali-dance-india-kerala-portraits-peopleandculture.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style> 
+<style>
+#navbar {
+      
+      background-color: black;
+      position: fixed;
+      top: 0;
+      width: 98.95%;
+      opacity: 1;
+      z-index:1;
+    }
+    #navbar a {
+      display: block;
+      float: left;
+      color: white;
+      font-size: 17px;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown2 {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown2 .dropbtn2 {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+        #navbar a:hover {
+          background-color: #bbb;
+          color:black;
+        }
+        .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        .dropdown2:hover .dropbtn2, .dropbtn2:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        #navbar a.active {
+          background-color: yellow;
+          color:black; 
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        .dropdown-content2 {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #FA8072;
+        }
+        .dropdown-content2 a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content2 a:hover {
+          background-color: #FA8072;
+        }
+        .show {
+          display: block;
+        }
+        .content {
+          padding: 15px;
+        }
+        .sticky {
+          background-position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        .sticky + .content {
+          padding: 60px;}
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+  .parallax {
+    background-attachment: scroll;
+  }
+.back2 {
+  margin: 0;
+  background-image: url("https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+<style>
+  .back3 {
+    margin: 0;   
+    background-image: url("https://images.unsplash.com/photo-1610001638581-9144a1b86fd6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTMyfHxmb29kcyUyMGluJTIwa2VyYWxhfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+<style>
+  .back4 {
+  margin: 0;
+  background-image: url("https://c0.wallpaperflare.com/preview/279/436/873/varkala-india-papanasam-beach-waves.jpg");
+  background-attachment: fixed;
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+<style >
+.searchbarheading{
+  text-align: center;
+  color: white;
+}
+
+
+.center {
+  opacity: 0.6;
+
+  background-color: #DCDCDC;
+  font-size:17px;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+.center2 {
+  opacity: 1;
+
+  background-color: #DCDCDC;
+  font-size:17px;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+.center3 {
+  opacity: 1;
+  background-color: #F8F8FF;
+  font-size:17px;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+.center4 {
+  opacity: 0.6;
+  background-color: #F8F8FF;
+  font-size:17px;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.clearfix {
+  overflow: auto;
+  padding: 20px;
+  color: black;
+}
+.img2 {
+  margin: auto;
+  margin-left: 10px;
+  float: right;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 25px;
+  right: 40px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 50px;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 50%;
+  height: 250px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 50%;
+  }
+}
+.img45 img{
+  border-radius: 50%;
+  opacity: 1;
+}
+</style>
+<style>
+
+#more {display: none;}
+
+
+</style>
+</head>
+<body>
+
+  <div id="navbar">
+      <a class="active" href="../index.html">Home</a>
+      <div class="dropdown2">
+        <button class="dropbtn2" onclick="myFunction2()">Travel Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content2" id="myDropdown2">
+          <a href="2-min-summary.html">2 Min Summary</a>
+          <a href="when-to-go.html">When to go</a>
+          <a href="maps&highlights.html">Maps & Highlights</a>
+          <a href="food.html">Food</a>
+          <a href="houseboats.html">Houseboats</a>
+          <a href="spices-and-tea.html">Spices and Tea</a>
+          <a href="walking.html">Walking</a>
+          <a href="ayurveda.html">Ayurveda</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Destinations
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Alleppey.html">Alleppey</a>
+          <a href="kochi.html">Cochin</a>
+          <a href="MUNNAR.HTML">Munnar</a>
+          <a href="trivendram.html">Trivandrum</a>
+          <a href="kozhikhode.html">Kozhikode</a>
+          <a href="wayanad.html">Wayanad</a>
+          <a href="kovalam.html">Kovalam</a>
+          <a href="bekal.html">Bekal</a>
+        </div>
+      </div>
+      <a href="#stories">Stories</a>
+      <a href="#contact">Contact us</a>
+    </div>
+  <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn2')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<div class="back">
+<br>
+<br>
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 class="searchbarheading"><span style="font-size: 80px;"> <b>KERALA ROVING</span></h1>
+    <h2 class="searchbarheading"><span style="font-size:40px;">2-MIN SUMMARY</h2><br>
+    <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+<br>
+
+
+
+<div class="parallax"></div>
+<section class="back2">
+  <br>
+<div class="center">
+  <h1 style= "text-align:center; font-size: 40px ">Kerala Travel Guide</h1>
+  <div class="clearfix">
+    <img class="img2" src="https://ars.els-cdn.com/content/image/1-s2.0-S0167880911000077-gr1.jpg" alt="map" width="150" height="150">
+    Kerala is like opening up a lucky bag of surprises. The first thing most people pick out is the western coastline that unfurls along the Arabian Sea. With its historic past of spice traders, European colonists and, consequently, cosmopolitan communities, each bay brings a different culture, craft and cuisine.<br> The next surprise gift is the Western Ghat Mountains in the east, with hill towns created as summer retreats by the British when the summer heat started to defeat.
+  </div>
+  <h2 style="text-align: center; font-style: oblique; color: red">" We're a bit tired of KERALA always being called GOD'S OWN COUNTRY. Kerala is so beautiful we are delighted to call it, quite simply, OUR COUNTRY " </h2>
+  <p style="margin: auto;padding: 15px"> For a truly invigorating experience, hike here after the monsoon when forests are bursting with life and waterfalls freshly found momentum. Falls that follow on to a wealth of rivers and lakes, making up Kerala’s wealth of wetlands, known as the backwaters. The backwaters are vibrant and vying for visitors with houseboats and homestays allowing you to explore the inland communities of coir makers, boat builders and crafts workers. Kerala is well set up for tourists, enabling you to go deeper into the backwaters, higher into the mountains, and further along the coast from the busier resorts, which can be a little like the tacky gift at the bottom of the bag. The rest, however, are all pure treats.</p>
+</div>
+<div class="center2">
+  <img src="./images/home2.jpg" src="boat" width="100%" >
+  <br>
+  <iframe  width="100%" height="470" src="https://www.youtube.com/embed/x6UlJBPOnvk?controls=0&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  
+</div>
+</section>
+<section class="back4"> 
+<div class="center4">
+  <br>
+  <h1 style="text-align: center; font-size: 40px"> WHAT WE RATE & WHAT WE DON'T</h1>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://photos.tripsite.com/assets/files/3347/india-munnar-state-of-kerala-bike-tour-hennie.webp" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>UNDERRATED</b></div>  
+  </div>
+</div>
+<div class="center4">
+  <h2>Cycling</h2>
+  <p>One of the finest ways to discover Kerala. Within a few hours out of Cochin you can be cycling through spice and coconut plantations, along the banks of the River Periyar with birds and butterflies that you can only have dreamed of, following you along the route. Cycle through small villages, staying at homestays, small guesthouses and eco lodges along the way. And relax those cycling muscles en route with a traditional Ayurvedic massage.</p>
+
+  <h2>North Kerala</h2>
+  <p>Many people have no idea Kerala exists beyond Cochin and the backwaters. The former spice trading hubs of the north have beaches that are galloping past the old favourites of Kovalam in the south in terms of being bliss out zones. Check out Bekal, Kannur or Neeleshwar. It does take more effort to get there, but beauty rarely come easily, right? And it means they are a lot less touristy.</p>
+  
+  <h2>Homestays</h2>
+  <p>You might not think it is for you, if privacy is what you want on holiday, but it really is worth spending at least a couple of days of your trip in a homestay. Most of them are small working farms, and Keralites are warm generous hosts, making you feel at home almost instantly. By far the best way to learn about real Kerala cuisine too, with hosts using their own organic ingredients.</p>
+  <h2>Cookery Lessons</h2>
+  <p>The world is discovering a taste for Keralan cookery, but nothing you try outside of India can compare with the real thing. The minute you taste real local food, you will be hooked. Food tours that stretch down into Kerala to gobble up dhosas and idlis exist, but a quick lesson with your homestay host will be equally unforgettable, and a useful additional source of income for them too.</p>
+</div>
+<div class="center3">
+<div class="container">
+  <img src="https://images.unsplash.com/photo-1588472235218-72ffeeea5775?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODJ8fGtheWFraW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="cycling" width="100%" height="550px">
+    <div class="bottom-right"><b>RATED</b></div> 
+</div>
+</div>
+<div class="center4">
+<h2>Kerala from a Kayak</h2>
+<p>Although houseboats are still the most popular way to get around the backwaters, kayak trips are the new way to go on the water, enabling to you escape the bustling channels full of tourists. In a kayak you access Kerala’s rural heart, where duck rearers, toddy tappers and fishermen welcome peaceful paddlers. Your bags are transported for you so that you can moor up, and stay at homestays or villas along the way.</p>
+<h2>Western Ghats</h2>
+<p>Few people associate Kerala with mountains, the Himalayas monopolizing the western desire for elevated landscapes. Kerala’s Western Ghats range is rapturous for most hikers and bikers, however. Named as one of the world’s Biodiversity Hotspots, it’s a daily festival of flora and fauna here. And no snow either in winter. A good starting point is the Raj town of Munnar, with the backdrop Anamudi, Kerala's highest peak at 2695m.</p>
+<h2>Fort Kochi</h2>
+<p>The colonial quarter of Kochi, on the northern end of the peninsula, with the sea on one side and Lake Vembanad on the other. It is a charming area of the harbour city to chill out in, with rickshaws water taxis and ferries to get you around. Check out the shops, as well as its old Jewish quarter, Chinese fishing nets, and a wonderful collection of restaurants and hotels, from grand to boutique.</p>
+<h2>Neighbouring States</h2>
+<p>You have not ‘done’ the south of India by just going to Kerala. Consider combining your trip with a few days in neighbouring Karnataka or Tamil Nadu to get a truly three dimensional picture of what south India is. Such as the The Mudumalai National Park in Tamil Nadu’s Nilgiri Hills or Bandipur National Park in Karnataka, not forgetting the historical hub of Mysore.</p>
+</div>
+<div class="center3">
+<div class="container">
+    <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="cycling" width="100%" height="550px">
+    <div class="bottom-right"><b>OVERRATED</b></div> 
+</div>
+</div>
+<div class="center4">
+<h2>Periyar National Park</h2>
+<p>Although located in beautiful Western Ghats, and famous for its tiger reserve, it certainly feels as if the amount of visitors outnumbers the number of wildlife sightings. You can only hike here with an official Park guide, and the lake cruises feel a bit more like party nights on the Thames. Although still worth a trip, just don’t raise your hopes for sightings. Go for tranquil bamboo rafting option instead of the cruise, but in peak season you need to book well in advance.</p>
+<h2>Kovalam Beach</h2>
+<p>Kovalam started as a hippy hangout in the seventies, but just like Goa or Bali, flower power grew into dollar power, and overdevelopment kicked in. Overcrowded and dirty, there are a lot of vendors hassling on the beaches and it is far from the peace and love vibe they were once idolized for. Head north or further south for beach bliss to places like Kasaragod, Neeleshwar or Marari.</p>
+<h2>Kathakali dance</h2>
+<p>Although stunning and totally Kerala it has, sadly, with the influence of tourism, become rather clinical and cynical. Originating in the 17th century it uses refined gestures and ornate singing to convey the story instead of dialogue. Traditionally performed from dusk til dawn, it is now done at resort hotels in enough time for guests to drink a sundowner. Check out the less commercially exploited ritual of Theyyam instead.</p>
+<h2>Ayurvedic Spas</h2>
+<p>The government went on a massive marketing spree to push Kerala as an Ayurvedic destination which means that it is attached to every spa going now. Although many are accredited and highly recommended, remember that this is a real way of life for Keralites, and a highly respected and all-encompassing way of living, with people visiting Ayurvedic hospitals and consultants. Not just a girls’ day out. Check out the government star ratings of Olive Leaf and Green Leaf Ayurvedic Centres for more guidance.</p>
+</div>
+</div>
+</section>
+<section class="back3">
+<div class="center">
+  <h1 style= "text-align:center; font-size: 40px ">Food, Shopping & People</h1>
+</div>
+<div class="center2">
+  <img src="./images/gettyimages-1124318165-612x612.jpg" alt="dosa" width="100%px" >
+</div>
+<div class="center">
+  <p style="font-size: 30px">Eating & Drinking in Kerala</p>
+  <p>Fresh seafood from the backwaters is always a treat. Check out Pollichathu steamed in banana leaves with local spices.<br></p>
+    <ul>
+      <li>Sambar is a dal based vegetarian curry.</li>
+      <li>Payasam is bit like rice pudding.</li>
+      <li>Fresh Toddy is the local alcoholic spirit, a bit like tequila.</li>
+      <li>Fish Moli or stew is fish at its most delish. Eat with appam bread bread for Michelin star-like magic.</li>
+    </ul>
+</div>
+<div class="center2">
+  
+    <h2 style="text-align: center; font-style: oblique; color: green">" Sadya is a Traditional kerala meal made from rice, vegetable and lentils served on a banana leaf. It is eaten at special family celebrations in Kerala and it always has COCONUT AS THE HERO. "</h2>
+
+  <img src="./images/gettyimages-1142674823-612x612.jpg" alt="women" width="100%" height="570px">
+</div>
+<div class="center">
+  <p style="font-size: 30px">People & Language</p>
+  <p>The majority of Keralites describe themselves as Malayalis, a Dravidian ethnic group indigenous to Kerala. Malayalam is the main language, and the word means ‘from beyond the mountains’ because originally they were seen as the people who lived beyond the Western Ghats. Most people speak a little English and a lot of signs are in both languages, with a spillover in place names such as Kozhikode which most people still call Calicut, which was the English version.</p>
+  <p>Thank you = "Nandi" (pronounced: nan-ní)</p>
+  <p>Temple = "Ambalam"</p>
+  <p>And a regular one in Kerala….Delicious = "Ruchikaram"</p>
+</div>
+<div class="center2">
+  <h2 style="font-size: 30px;padding-left: 25px">Gifts & Shopping</h2>
+  <div class="clearfix">
+    <img class="img2" src="https://images.unsplash.com/photo-1514733670139-4d87a1941d55?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjV8fHRlYXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="tea" width="50%" height="220">-Ayurvedic medicine is available in pharmacies everywhere. Get a consultation for your ailments or bring some herbal happiness in a bottle back for a friend.<br>-Buy spices from Cochin market, where they have been traded for centuries. Vanilla, cardamom and cumin seeds are favourites.<br>-Have a garment made for you, such as a silk shirt or dress.<br>-Munnar is just your cup of tea if you want to buy some to bring home.<br>-Calico cloth originated in Kozhikode and can be purchased by the roll in the city.</div>
+  </div>
+    <div class="center"><br></div>
+    <div class="center2">
+      <h2 style="text-align: center; font-style: oblique; color: green">"Buy all your toiletries here in Kerala, avoiding airport 100 ml madness. The ayurvedic body products are better than anything you'll get in boots."</h2><br>
+      <img src="./images/Screenshot 2021-03-26 224256.jpg" alt="coconut" width="100%">
+      </div>
+      <div class="center">
+      <h1 style= "text-align:center; font-size: 40px "> <u>Brief History of Kerala</u></h1> 
+  
+      <p>It is ironic that tourists have only been seeking out the sun, sands and summits of Kerala for the last twenty years or so. Because Kerala was the first place in India to be colonized by Europeans who noted and then exploited the resources of this natural wonderland as far back as 1498 when the Portuguese discovered a sea route between Lisbon and Kozhikode. Indeed you can still see the spot where Vasco de Gama landed on Kappad beach. He went on to be named the Viceroy of India in 1524. As was the trend in these parts, the Portuguese were followed by the Dutch, French, Italians and then, finally the British, who thrived on the trade of spices and silk for generations. And tea, of cou<span id="dots">...</span><span id="more">rse. There is a lot of emphasis put on European influences in Kerala’s history, as it has had such an impact on architecture, language and religion. However the multicultural societies in Kerala, where Muslims, Hindus, Buddhists, Christians and Jews have lived alongside each other for hundreds of years go back much further in history. Christianity began with the arrival of St. Thomas In 52 AD, Jews came after they were forced to flee during the Jewish-Roman Wars of 66-135 AD and Islam was introduced to the region in 644 AD, when Malik Deenar, the first follower of the Islamic prophet, Muhammed, came here to promote Islam. Buddhism had been thriving here since 270 B.C and Brahmanical Hinduism began here around 644 AD with families of that favour settling into 64 villages around the region.<br><br>
+
+And if you wonder why Kerala claims to have the most highly educated and literate population of India, you just need to look back as far as the 3rd and 4th centuries AD, known as the Sangam period, when the country was dominated by poets and scholars, kings and philosophers - all fervent students at academies based in Madurai, where Tamil literature was created in what is now the neighbouring state of Tamil Nadu. And with knowledge came Kerala’s kingdoms, the most significant of which were the Chera Kingdoms from 7th to 9th centuries, who were ousted by the 10th century by the neighbouring Chola and Pandya Kingdoms, all battling over territory for years. Which is why, if you are travelling to Kerala, it is worth visiting the neighbouring states of Tamil Nadu and Karnataka to get the bigger picture.
+ <br><br>
+ <img src="https://i.pinimg.com/564x/6e/c9/ac/6ec9ac4d695997c84f27eaff7846a289.jpg" alt="history" width="100%"><br><br>
+This was the scenario when the Europeans arrived, with provincial wars preventing a total takeover by the westerners. And when the British took over in the 1630’s it wasn’t without a battle either, as they struggled to slowly conquer the Malabar and Kazargod districts, but entered an alliance with the rulers of Cochin (1791) and Travancore (1795) where they conceded, agreeing for them to become ‘princely states’ of British India, maintaining local autonomy in return for a fixed annual tribute to the British. When independence from the UK happened in 1947, these two independent kingdoms joined the Union of India, and with the reshuffling of other regions, officially became part of the state of Kerala in 1956.
+ <br><br>
+Kerala still maintains a sense of strong patriotism and independence today, and political drive is strong here. Interestingly, it was the first place in the world to democratically elect a Communist government in 1957 and it is still considered to be a state that promotes social well-being and education. And it still fights for its rights, with strikes a feature of daily life here.</span></p>
+<button onclick="myFunction3()" id="myBtn">Read more</button>
+
+
+
+      <script>
+function myFunction3() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+</div>
+<!--<div class="container">
+  <img src="/w3images/notebook.jpg" alt="Notebook" style="width:100%;">
+  <div class="content">
+    <h1>Heading</h1>
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+  </div>
+</div>-->
+<div class="footer" style="background-color:black">
+    <br>
+    <br>
+    <br>
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white;">CONTACT US<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:0.5">
+    <p>tarushi.sharma.it.2018@miet.ac.in<br>manvi.deepak.cs.2018@miet.ac.in</p>
+    </div>
+    
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white">WEB DEVELOPER<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:1;padding-left:25%;padding-right:25%">
+      <div class="row">
+  <div class="column2 " style="background-color:black;padding-left:4%;padding-right:4%">
+    <div class="img45">
+    <img src="./images/IMG-20190921-WA0004-02-01.jpeg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>TARUSHI SHARMA</h2>
+  </div>
+  <div class="column2 " style="background-color:black;padding-left:25px;padding-right:25px">
+     <div class="img45">
+    <img src="./images/IMG_20201201_125144373.PORTRAIT-01.COVER (2).jpg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>   MANVI TOMAR     </h2>
+  </div>
+</div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
