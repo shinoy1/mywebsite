@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#navbar {
+      
+      background-color: black;
+      position: fixed;
+      top: 0;
+      width: 98.95%;
+      opacity: 1;
+      z-index:1;
+    }
+    #navbar a {
+      display: block;
+      float: left;
+      color: white;
+      font-size: 17px;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown2 {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown2 .dropbtn2 {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+        #navbar a:hover {
+          background-color: #bbb;
+          color:black;
+        }
+        .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        .dropdown2:hover .dropbtn2, .dropbtn2:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        #navbar a.active {
+          background-color: yellow;
+          color:black; 
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        .dropdown-content2 {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #bbb;
+        }
+        .dropdown-content2 a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content2 a:hover {
+          background-color: #bbb;
+        }
+        .show {
+          display: block;
+        }
+        .content {
+          padding: 15px;
+        }
+        .sticky {
+          background-position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        .sticky + .content {
+          padding: 60px;}
+</style>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url("https://image3.mouthshut.com/images/imagesp/925004325s.jpg");
+  background-color: #cccccc;
+  height:615px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  
+}
+.texte{
+padding-left: 15%;
+padding-right:15%;
+  margin: 0;
+ background-color: black;
+}
+.img {
+  margin: auto;
+  margin-left: 10px;
+  float: right;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+.center3 {
+  opacity: 1;
+  background-color: #F8F8FF;
+  font-size:17px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+.center4 {
+  opacity: 0.6;
+  background-color: #F8F8FF;
+  font-size:17px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 25px;
+  right: 40px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 50px;
+  color: white;
+}
+.clearfix {
+  overflow: auto;
+  padding: 20px;
+  color: black;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: auto;
+  min-height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+}
+.left2 {
+  width: 60%;
+}
+
+.right2 {
+  width: 40%;
+}
+.left3 {
+  width: 50%;
+}
+
+.right3 {
+  width: 50%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.social1{
+  background-color: black;
+  left: 500px;
+}
+.socialmd1{
+    height: 100px;
+    position: relative;
+
+}
+.socialbutton1{
+    background-color: black;
+    margin: 0;  
+    position: absolute;
+    opacity: 1;
+    left: 600px;
+    -ms-transform : translate(-50% , -50%);
+    trasform:translate(-50% , -50%);
+}
+.fa1 {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.fa1:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook1 {
+  background:#92a8d1;
+  color: white;
+}
+
+.fa-twitter1 {
+  background: #92a8d1;
+  color: white;
+}
+
+.fa-youtube1 {
+  background: #92a8d1;
+  color: white;
+}
+
+.fa-instagram1 {
+  background: #92a8d1;
+  color: white;
+}
+
+</style>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 50%;
+  height: 250px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 50%;
+  }
+}
+.img45 img{
+  border-radius: 50%;
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+  <div id="navbar">
+      <a class="active" href="front_page.html">Home</a>
+      <div class="dropdown2">
+        <button class="dropbtn2" onclick="myFunction2()">Travel Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content2" id="myDropdown2">
+          <a href="2-min-summary.html">2 Min Summary</a>
+          <a href="when-to-go.html">When to go</a>
+          <a href="maps&highlights.html">Maps & Highlights</a>
+          <a href="food.html">Food</a>
+          <a href="houseboats.html">Houseboats</a>
+          <a href="spices-and-tea.html">Spices and Tea</a>
+          <a href="Walking.html">Walking</a>
+          <a href="ayurveda.html">Ayurveda</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Destinations
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Alleppey.html">Alleppey</a>
+          <a href="kochi.html">Cochin</a>
+          <a href="MUNNAR.HTML">Munnar</a>
+          <a href="trivendram.html">Trivandrum</a>
+          <a href="kozhikhode.html">Kozhikode</a>
+          <a href="wayanad.html">Wayanad</a>
+          <a href="kovalam.html">Kovalam</a>
+          <a href="bekal.html">Bekal</a>
+        </div>
+      </div>
+      <a href="#stories">Stories</a>
+      <a href="contact_us.html">Contact us</a>
+    </div>
+     <script>
+    /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn2')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:70px;">BEKAL</h1>
+    <h3 style="opacity: 0.7">Tranquillity, peace, nature, backwaters, all define Bekal, which is perfectly situated on the Malabar coastline and is famously known as one of the most-visited destinations in Kerala. There are numerous places to visit in Bekal that will make you want to visit this tourist destination again! To all the nature lovers, don’t miss out visiting this beautiful spot that offers a wide range of superb places to explore the marvelousness of gods own country, Kerala.</h3>
+  </div>
+</div>
+<div class="space" style=" background-color: #F8F8FF;opacity:0.6">
+<br>
+</div>
+<section class="texte"> 
+<div class="center4">
+  <br>
+  <h1 style="text-align: center; font-size: 40px ">PLACES TO VISIT IN BEKAL</h1>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px;padding-left:20px">
+<p>The exquisite places to visit in Bekal ranges from breathtaking beaches, stunning churches, historic forts, fun parks and splendid temples.</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="http://corporateoutbound.in/wp-content/uploads/2016/05/Bekal-fort.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>BEKAL FORT</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px;padding-left:20px">
+<p>Stretched out covering an area of more than forty acres, the 300-year-old Bekal Fort is one of the best places to visit in Bekal. The fort is sophisticatedly designed housing a marvellous water tank, the ammunition magazine, the tunnel and beautifully decked path that will lead you to the observation tower. Good spot for history lovers and those who have hankering to explore.<br><br><b>Visiting Timings: </b>8:00 am – 5:30 pm<br><b>Entry Fee: </b>Rs 5 per person for Indians and SAARC nationals; Rs 100 per person for foreign nationals<br><b>Famous For: </b>Superb views of the Arabian Sea from the observation tower</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://c0.wallpaperflare.com/preview/214/307/761/india-ananthapura-temple-parking-area-temple-lake.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>Ananthapura Lake Temple</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>A magnificent attraction in the northern tipoff Kerala, Ananthapura Lake Temple is surrounded by a rectangular lake that supplies the spring water to it. Those who’re looking for places to visit in and around Bekal, this temple located thirty kilometres from Bekal is the right place. The drive to this ninth century temple will surely make you calm and composed, and you will be deeply rejuvenated from the inner cores.
+<br><br>
+<b>Visiting Timings: </b>5:30 am – 12:30 pm and 5:30 pm – 7:30 pm
+<br><b>Entry Fee: </b>free
+<br><b>How Much Time To Spend: </b>2-3 hrs
+<br><b>Famous For: </b>Babia, the vegetarian crocodile and temple guardian; scenic views of the hillocks from the temple</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://www.holidify.com/images/cmsuploads/compressed/Chandragiri-Fort_20190116143501.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>Chandragiri Fort</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>One of the best places to visit near Bekal Fort, Chandragiri Fort was built in the seventeenth century by Siyappa Nayak of Bednore. It is perfectly situated on the banks of the Chandragiri River. What makes it a beautiful vantage point is its wonderful views to watch the sunset. Plan a trip with your closed ones and spend some peaceful time to make unforgettable memories.
+<br><br>
+<b>Visiting Timings: </b>8:00 am – 5:30 pm
+<br><b>Entry Fee: </b>Rs 5 per person for Indians and SAARC nationals; Rs 100 per person for foreign nationals
+<br><b>How Much Time To Spend: </b>1-2 hours
+<br><b>Famous For: </b>An excellent panorama for the photographers to capture, picturesque view of the Payaswini River from the topmost floor</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://www.keralatourism.org/images/picture/large/Malik_Dinar_Mosque_2428.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>Malik Deenar Mosque</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>Founded by Malik Deenar, this mosque is known as one of the most famous places to visit in Bekal, Kerala. Equipped with a sloped roof and the principal manor, this beautiful piece is constructed in typical Kerala style but will offer a different kind of peace when you enter. Again, a great place for history lovers who will find complete serenity in the enticing Malik Deenar Mosque.
+<br><br>
+<b>Visiting Timings: </b>4:00 am – 7:00 pm
+<br><b>Entry Fee: </b>NA
+<br><b>Famous For: </b>Architecture and serenity</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://i.pinimg.com/originals/37/21/ea/3721ea1a83e3e86b56a47e13fe6f06d4.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>Valiyaparamba Backwaters</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>If you want to go on a Bekal sightseeing tour, you must include Valiyaparamba to your itinerary. It is a beautiful island situated in River Tejaswini and is widely known as one of the most picturesque backwater destinations in Bekal. It is also a fishing centre which adds to the beauty of the island. You will see many natural beauties such as a huge variety of seabirds, coconut lagoons and take part in activities like husking and many more.
+<br><br>
+<b>Visiting Timings: </b>Early morning hours
+<br><b>Entry Fee: </b>NA
+<br><b>Famous For: </b>Fishing centre</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://www.keralatourism.org/images/picture/large/Kappil_beach_Kasaragod_208.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>Kappil Beach</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>The sun, the sand, the clear sea water and lush green coconut trees, what more you want? This beach offers all in plenty. If you have a high budget, you can stay at Taj Bekal Resort, beautifully constructed at the beach. It’s a perfect place to sit, relax, watch sunsets while being enclosed in complete serenity. This one of the best places to visit in Bekal for those in search for salty sea air and some me-time.
+<br><br>
+<b>Visiting Timings: </b>sunrise to sunset
+<br><b>Entry Fee: </b>NA
+<br><b>How Much Time To Spend: </b>2-3 hours
+<br><b>Famous For: </b>Amazing picturesque views
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://i.pinimg.com/564x/47/b2/9a/47b29a1bafac4391a814776c42b47ac5.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>Bekal Beach</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>How can a trip to Bekal be complete without visiting Bekal Beach? Expanding over an area of thirty-six acres, this beach attracts a large number of tourists every year. If you are looking for a long and relaxing stroll, Bekal Beach awaits you. You can go and spend some quality time with your family and friends at this soothing beach, popular as one of the best places to visit in Bekal, Kerala.
+<br><br>
+<b>Visiting Timings: </b>open 24 hours
+<br><b>Entry Fee: </b>Rs 10 for adults and free of cost for kids below five years
+<br><b>Famous For: </b>Bekal Fort and breath-taking views</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://i.pinimg.com/564x/88/22/bb/8822bbafa73dee70d58c19f09327bd89.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b> Pallikere Beach</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>Perfectly located at one kilometre from the famous Bekal Fort, this beach has amazing offerings that will surely give you tranquil experiences. It is also known as a superb picnic spot for tourists and visitors. This natural attraction will take you on a journey of solitude and also offers spectacular views of the Bekal Fort.
+<br><br>
+<b>Visiting Timings: </b>From sunrise to sunset
+<br><b>Entry Fee: </b>NA
+<br><b>Famous For: </b>Sunset, swimming, sunbath, photography, serenity, views, watersports</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2019/03/Maquoketa_Caves_02.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b> Nityanandashram Caves</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>These are a group of 45 caves that are situated in Hosdurg. The most interesting fact about these caves is that they were structured out of a single rock and feature 6 entrances. The highlight of these caves is Swami Nityananda’s sculpture that has been designed from panchaloha. This tourist site is known to be famous for meditative and spiritual activities.
+<br><br>
+<b>Visiting Timings: </b>NA
+<br><b>Entry Fee: </b>NA
+<br><b>Famous For: </b>Caves and natural park</p>
+</div>
+<div class="center4">
+  <br>
+  <h1 style="text-align: center; font-size: 40px ">THINGS TO DO IN ALLEPEY</h1>
+</div>
+<div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <h2>The Bekal Hole Aqua Park</h2>
+    <p>Bekal Hole Aqua Park is a unique leisure spot, located just one km north of the Bekal Fort. A haven for the water sport enthusiasts, the park is the only one of its kind in North Malabar that provides facilities like pedal boats and water cycles. The park offers a long day relaxation and the visitors can enjoy the water rides through the cool stretches of the Bekal hole backwaters. It is an adventure park which offers various forms of water rides to its visitors. Pedal boats and water cycles offer hours long relaxation on the cool stretches of the Bekal Hole backwaters.</p>
+  </div>
+  <div class="column right" style="background-color:#bbb;">
+     <img src="https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2018/06/Bekal-Hole-Aqua-Park-ss12052018.jpg" alt="boat pic" width="100%" height="290px">
+  </div>
+</div>
+<div class="row">
+  <div class="column left2" style="background-color:#aaa;">
+    <h2>Kalaripayattu</h2>
+    <p>Kalaripayattu is an Indian martial arts and fighting system that originated in Kerala and practiced by warriors of Kerala and Tamil Nadu. There is a mention about Tulunadan Kalari in the ballads of Kerala. In Kerala, the warriors belonged to all castes and religions. It is considered by some to be the oldest martial art still in existence, with its origin dating back to the 3rd century BCE. Although Kalaripayattu is called The Mother Of All Martial Arts. you wouldn't want to miss this epic show of kalari.
+    </p>
+  </div>
+  <div class="column right2" style="background-color:#bbb;">
+     <img src="https://media.gettyimages.com/photos/kalaripayattu-the-martial-arts-form-of-kerala-in-the-south-of-india-a-picture-id461726118?k=6&m=461726118&s=612x612&w=0&h=Hp6pczlIwDr2-r1MlA4OabUreDiZeAF7Lu6FoB2Cvvk=" alt="ayurvedic pic" width="100%" height="290px">
+  </div>
+</div>
+<div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <h2>Bekal Aquatics</h2>
+    <p>BEKAL AQUATICS offers various water sports activities such as Speed boating,Jet Ski, Banana Ride, Ringo Ride, Kayaking,Surfing Etc. We are located near to Bekal Fort and we offer well maintained beach and equipments with the support of well trained staffs,life guards and professional riders.</p>
+  </div>
+  <div class="column right" style="background-color:#bbb;">
+     <img src="https://images.unsplash.com/photo-1570060294351-f74295c31fb8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2F0ZXIlMjBzcG9ydHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="cart pic" width="100%" height="290px">
+  </div>
+</div>
+<div class="row">
+  <div class="column left2" style="background-color:#aaa;">
+    <h2>Stay At Taj Bekal</h2>
+    <p>If you step in Bekal for your holidays, staying and relishing the luxury of Vivanta by Taj, Bekal is a must. Located on the Arabian Sea, the property consists of 71 luxurious villas and rooms over a vast landscape that stretches up to 26 acres of land. Be it kayaking, boating, rowing, fishing or trekking, the adventurous things to do in Taj Bekal will offer you an experience of a lifetime. Apart from the activities, one can also treat their taste buds to authentic Kerala cuisine at the three in-house multi cuisine restaurants.</p>
+  </div>
+  <div class="column right2" style="background-color:#bbb;">
+     <img src="https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2018/04/1012.jpg" alt="beach pic" width="100%" height="290px">
+  </div>
+</div>
+
+</section>
+
+
+
+<div class="footer" style="background-color:black; opacity: 0.9">
+    <br>
+    <br>
+    <br>
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white;">CONTACT US<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:0.5">
+    <p>tarushi.sharma.it.2018@miet.ac.in<br>manvi.deepak.cs.2018@miet.ac.in</p>
+    </div>
+    
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white">WEB DEVELOPER<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:1;padding-left:25%;padding-right:25%">
+      <div class="row">
+  <div class="column2 " style="background-color:black;padding-left:4%;padding-right:4%">
+    <div class="img45">
+    <img src="C:\Users\maama\Desktop\roving images\IMG-20190921-WA0004-02-01.jpeg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>TARUSHI SHARMA</h2>
+  </div>
+  <div class="column2 " style="background-color:black;padding-left:25px;padding-right:25px">
+     <div class="img45">
+    <img src="C:\Users\maama\OneDrive\Pictures\Camera Roll\IMG_20201201_125144373.PORTRAIT-01.COVER (2).jpg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>   MANVI TOMAR     </h2>
+  </div>
+</div>
+    </div>
+</div>
+</body>
+</html>

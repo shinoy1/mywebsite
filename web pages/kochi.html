@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KOCHI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#navbar {
+      
+      background-color: black;
+      position: fixed;
+      top: 0;
+      width: 98.95%;
+      opacity: 1;
+      z-index:1;
+    }
+    #navbar a {
+      display: block;
+      float: left;
+      color: white;
+      font-size: 17px;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown2 {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown2 .dropbtn2 {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+        #navbar a:hover {
+          background-color: #bbb;
+          color:black;
+        }
+        .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        .dropdown2:hover .dropbtn2, .dropbtn2:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        #navbar a.active {
+          background-color: yellow;
+          color:black; 
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        .dropdown-content2 {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #bbb;
+        }
+        .dropdown-content2 a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content2 a:hover {
+          background-color: #bbb;
+        }
+        .show {
+          display: block;
+        }
+        .content {
+          padding: 15px;
+        }
+        .sticky {
+          background-position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        .sticky + .content {
+          padding: 60px;}
+</style>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url("https://images.unsplash.com/photo-1591353527265-01cf8c5327a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=786&q=80");
+  background-color: #cccccc;
+  height:615px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  
+}
+.texte{
+padding-left: 15%;
+padding-right:15%;
+  margin: 0;
+ background-color: black;
+}
+.img {
+  margin: auto;
+  margin-left: 10px;
+  float: right;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+.center3 {
+  opacity: 1;
+  background-color: #F8F8FF;
+  font-size:17px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+.center4 {
+  opacity: 0.6;
+  background-color: #F8F8FF;
+  font-size:17px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 25px;
+  right: 40px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 50px;
+  color: white;
+}
+.clearfix {
+  overflow: auto;
+  padding: 20px;
+  color: black;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: auto;
+  min-height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+}
+.left2 {
+  width: 60%;
+}
+
+.right2 {
+  width: 40%;
+}
+.left3 {
+  width: 50%;
+}
+
+.right3 {
+  width: 50%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 50%;
+  height: 250px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 50%;
+  }
+}
+.img45 img{
+  border-radius: 50%;
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+  <div id="navbar">
+      <a class="active" href="front_page.html">Home</a>
+      <div class="dropdown2">
+        <button class="dropbtn2" onclick="myFunction2()">Travel Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content2" id="myDropdown2">
+          <a href="2-min-summary.html">2 Min Summary</a>
+          <a href="when-to-go.html">When to go</a>
+          <a href="maps&highlights.html">Maps & Highlights</a>
+          <a href="food.html">Food</a>
+          <a href="houseboats.html">Houseboats</a>
+          <a href="spices-and-tea.html">Spices and Tea</a>
+          <a href="Walking.html">Walking</a>
+          <a href="ayurveda.html">Ayurveda</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Destinations
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Alleppey.html">Alleppey</a>
+          <a href="kochi.html">Cochin</a>
+          <a href="MUNNAR.HTML">Munnar</a>
+          <a href="trivendram.html">Trivandrum</a>
+          <a href="kozhikhode.html">Kozhikode</a>
+          <a href="wayanad.html">Wayanad</a>
+          <a href="kovalam.html">Kovalam</a>
+          <a href="bekal.html">Bekal</a>
+        </div>
+      </div>
+      <a href="#stories">Stories</a>
+      <a href="contact_us.html">Contact us</a>
+    </div>
+     <script>
+    /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn2')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:70px;">KOCHI</h1>
+    <h3 style="opacity: 0.7">This gorgeous city is also called the ‘Queen of the Arabian Sea’ and has been a centre of attraction since time immemorial!</h3>
+  </div>
+</div>
+<div class="space" style=" background-color: #F8F8FF;opacity:0.6">
+<br>
+</div>
+<section class="texte"> 
+<div class="center4">
+  <br>
+  <h1 style="text-align: center; font-size: 40px ">PLACES TO VISIT IN KOCHI</h1>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://www.tripsavvy.com/thmb/vcMC96p1vCerpDDV-qkyZjyGo9A=/2119x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-598938348-29bfa61047b2472b8c2a702cab14ef2f.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>Fort Kochi</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px;padding-left:20px">
+<p>The once a hub of the spice traders from various corners of the globe, Fort Kochi is among the most spectacular place to visit in Cochin. Steeped with history or the livelier reminiscent of the past, a walk around this vicinity along with the prismatic views of the Chinese fishing nets is a must experience for the visitors.</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://www.culturalmapping.in/fortkochi/sites/default/files/styles/full_width/public/2016-12/030VASCO%20HOME%20%285%29.jpg?itok=6gbqFVPz" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>Vasco House:</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>Kochi is the melting point of history and culture; the Vasco House on the Rose Street of this port city is one such livelier example! Believed to be the residence of Portuguese explorer Vasco da Gama, it is among the oldest heritage houses in India.</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://www.remotetraveler.com/wp-content/uploads/2014/10/Santa-Cruz-Basilica-Fort-Kochi.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>Santa Cruz Basilica</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>This pious site dates back to 1505, and was originally built by the Portuguese. Though it was later destroyed by the British colonists, it was later rebuilt in 1905.</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://optimatravels.com/images/kerala-images/dutch-palace-800x400.jpg" alt ="dutch palace" width="100%" >
+    <div class="bottom-right"><b>Dutch Palace</b></div>  
+</div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>The Raja of Kochi received this historic palace as a gift from the Portuguese! Built in typical Portuguese and Malabar architecture, the palace showcases ancient murals and wall paintings, and is a true treasure trove for the visitors to Kochi.</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://cf.bstatic.com/images/hotel/max1024x768/852/85238241.jpg" alt="bolghatty palace" width="100%" >
+    <div class="bottom-right"><b>Bolghatty Palace</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>Situated in the Bolghatty Island, this historic palace was once a royal retreat. At present, it has been converted into a heritage hotel that can be accessed only by boats.</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://www.transindiatravels.com/wp-content/uploads/hill-palace-of-tripunithura.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>Hill Palace</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>A 19th century palace, Hill Palace was once the royal seat of Raja of Kochi. It now serves as a museum that houses numerous belongings of the past; a visit to Hill Palace will get the visitors acquainted with the glorious history of Kochi.</p>
+</div>
+<div class="center3">
+  <div class="container">
+    <img src="https://planmitrip.in/admin/gallery/mangalavanam-min.jpg" alt="cycling" width="100%" >
+    <div class="bottom-right"><b>Mangalavanam Bird Sanctuary</b></div>  
+  </div>
+</div>
+<div class= "text" style="color:white;text-align: center;opacity:0.6; font-size: 20px">
+<p>An indigenous home to a large number of avifauna, Mangalavanam Bird Sanctuary is a major attraction among the nature lovers to Kochi. Located at the heart of the city, it is a wonderful day-out destination and a paradise for the bird watchers.</p>
+</div>
+<div class="center4">
+  <br>
+  <h1 style="text-align: center; font-size: 40px ">THINGS TO DO IN KOCHI</h1>
+</div>
+<div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <h2>Sightseeing</h2>
+    <p>Kochi is one of the most beautiful cities in Kerala. Decked with historical landmarks, alluring shorelines, religious spots, and much more, it definitely makes it for an ideal sightseeing destination in God’s Own Country.</p>
+  </div>
+  <div class="column right" style="background-color:#bbb;">
+     <img src="https://images.unsplash.com/photo-1585229190075-5d94076e3c81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="beach pic" width="100%" height="290px">
+  </div>
+</div>
+<div class="row">
+  <div class="column left2" style="background-color:#aaa;">
+    <h2>Cultural Tours</h2>
+    <p>This charming port city is also a wonderful destination to witness and enjoy the colourful cultures and traditions in Kerala. Visitors to Kochi can revel in regular Kathakali dance performances along with several other shows while manoeuvring around the city.</p>
+  </div>
+  <div class="column right2" style="background-color:#bbb;">
+     <img src="https://images.unsplash.com/photo-1593872356907-d67e8587d0f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80" alt="beach pic" width="100%" height="290px">
+  </div>
+</div>
+<div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <h2>Enjoy Backwater Homestay</h2>
+    <p>For those visitors who want to delve deep into the history and hospitality of Kochi, they must go for backwater homestays! Located on the outer fringes of the city limits; mostly in and around Alappuzha, these homestays are the doorways to Kerala’s rustic cultures and traditions.</p>
+  </div>
+  <div class="column right" style="background-color:#bbb;">
+     <img src="https://images.thrillophilia.com/image/upload/s--lAa0HATt--/c_fill,h_600,q_auto,w_975/f_auto,fl_strip_profile/v1/images/photos/000/326/343/original/1593260048_222914358.jpg.jpg?1593260048" alt="beach pic" width="100%" height="290px">
+  </div>
+</div>
+<div class="row">
+  <div class="column left2" style="background-color:#aaa;">
+    <h2>Visit Chinese Fishing Nets</h2>
+    <p>Mostly located towards the northern side of Fort Kochi, the Chinese Fishing Nets have become synonymous to the enchanting beauty of Kochi’s shorelines. On a visit to this promising port-city, visitors must visit these traditional fishing nets to have a glimpse of Kerala’s golden past.</p>
+  </div>
+  <div class="column right2" style="background-color:#bbb;">
+     <img src="https://ak.jogurucdn.com/media/image/p25/place-2017-01-9-10-ab82a9648501df3583a71af186ca18ce.jpg" alt="beach pic" width="100%" height="290px">
+  </div>
+</div>
+
+</section>
+<div class="footer" style="background-color:black; opacity: .9">
+    <br>
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white;">CONTACT US<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:0.5;">
+    <p>tarushi.sharma.it.2018@miet.ac.in<br>manvi.deepak.cs.2018@miet.ac.in</p>
+    </div>
+    
+    <h1 style= "font-family: 'El Messiri', sans-serif;font-size: 2em;text-align: center;color:white">WEB DEVELOPER<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:1;padding-left:25%;padding-right:25%">
+      <div class="row">
+  <div class="column2 " style="background-color:black;padding-left:4%;padding-right:4%">
+    <div class="img45">
+    <img src="C:\Users\maama\Desktop\roving images\IMG-20190921-WA0004-02-01.jpeg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>TARUSHI SHARMA</h2>
+  </div>
+  <div class="column2 " style="background-color:black;padding-left:25px;padding-right:25px">
+     <div class="img45">
+    <img src="C:\Users\maama\OneDrive\Pictures\Camera Roll\IMG_20201201_125144373.PORTRAIT-01.COVER (2).jpg" alt="Paris" width="150" height="150">
+  </div>
+    <h2>   MANVI TOMAR     </h2>
+  </div>
+</div>
+    </div>
+</div>
+</body>
+</html>

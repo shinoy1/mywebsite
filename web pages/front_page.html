@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+}
+@media only screen and (min-width: 768px) {
+  
+}
+/* backgroung image */
+.back {
+  /* The image used */
+  background-image: url('https://www.keralatourism.org/images/hri/large/siruvani_palakkad_2_674.JPG');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<style>
+#navbar {
+      
+      background-color: rgba(0,0,0,0.8);
+      position: fixed;
+      top: 0;
+      width: 100%; 
+      z-index:1;
+    }
+    #navbar a {
+      display: block;
+      float: left;
+      color: white;
+      font-size: 17px;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown2 {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown2 .dropbtn2 {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: black;
+      font-family: inherit;
+      margin: 0;
+    }
+        #navbar a:hover {
+          background-color:#bbb;
+          color:black;
+        }
+        .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        .dropdown2:hover .dropbtn2, .dropbtn2:focus {
+          background-color:#bbb;
+          color: black;
+        }
+        #navbar a.active {
+          background-color: #bbb;
+          color:black; 
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        .dropdown-content2 {
+          display: none;
+          position: absolute;
+          background-color: #bbb;
+          color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #bbb;
+        }
+        .dropdown-content2 a {
+          position: sticky;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content2 a:hover {
+          background-color: #bbb;
+        }
+        .show {
+          display: block;
+        }
+        .content {
+          padding: 15px;
+        }
+        .sticky {
+        background-position: fixed;
+          top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        .sticky + .content {
+          padding: 60px;}
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0; 
+  width: 100%;
+}
+
+.topnav a {
+  float: left;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgba(0,0,0,0.8);
+}
+.topnav a.active {
+  background-color: #4CAF50;
+  color: rgba(0,0,0,0.8);   
+}
+
+</style>
+
+<style >
+.topnav1{
+  text-align: center;
+}
+  input{font-size: 24px;
+    
+}
+.searchbarheading{
+  text-align: center;
+  color: white;
+  padding-top: 140px;
+}
+
+.search-container button {
+  text-align: center;
+  padding-top: 9px;
+  padding-bottom: 3px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+::placeholder {
+  color: black;
+  opacity: 1;
+  font-size: 17px;
+  padding-left: 5px;
+  padding-bottom: 4px;
+};
+ .search-container button:hover {
+  background: #ccc;
+}
+
+</style>
+
+<style>
+body {
+    margin:0;
+    padding: 0;
+    background: #262626;
+    font-family: sans-serif;
+    
+
+}
+.container {
+    width: 100%;
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.container .box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: black;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+
+
+}
+.container .box .imgBox {
+    position: relative;
+    overflow: hidden;
+}
+.container .box .imgBox img {
+    width: 300px;
+    height: 300px;
+    transition: transform 2s;
+}
+.container .box:hover .imgBox img {
+    transform: scale(1.2);
+    width: 300px;
+    height: 300px;
+}
+.container .box .details {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,.5);
+    transform: scaleY(0);
+    transition: transform .5s;
+        text-align: center;
+     
+
+}
+.container .box:hover .details {
+    transform: scaleY(1);
+}
+.container .box .details .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+.container .box .details .content h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #ff0;
+}
+.container .box .details .content p {
+    margin: 10px 0 0 ;
+    padding: 0;
+    text-align: center;
+}
+ .headf{
+  text-align: center;
+  margin: auto;
+  opacity: 1;
+   
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.social{
+  background-color: #92a8d1;
+
+}
+.socialmd{
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+.socialbutton{
+    background-color: #92a8d1;
+    margin: 0;  
+    position: absolute;
+    opacity: 1;
+    -ms-transform : translate(-50% , -50%);
+    trasform:translate(-50% , -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background:#92a8d1;
+  color: white;
+}
+
+.fa-twitter {
+  background: #92a8d1;
+  color: white;
+}
+
+.fa-youtube {
+  background: #92a8d1;
+  color: white;
+}
+
+.fa-instagram {
+  background: #92a8d1;
+  color: white;
+}
+.backu{
+   background-image: url('https://images.unsplash.com/photo-1580289869586-3baf90956ccc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80');
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+</style>
+<style>
+.backslide{
+ {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image 
+{
+  height: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  
+
+.bg-text 
+{
+  background-color: rgba(0.4);
+  color: black;
+  font-weight: bold;
+  font-size: 80px;
+  position: fixed;
+  top: 50%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 300px;
+  padding: 0px;
+  text-align: center;
+}
+}
+</style>
+
+<style>
+body {
+    margin:0;
+    padding: 0;
+    background: #262626;
+    font-family: sans-serif;
+}
+.container2 {
+    width: 100%;
+    margin: 5px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.container2 .box2 {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: black;
+    margin: 15px;
+
+    box-sizing: border-box;
+    display: inline-block;
+}
+.container2 .box2 .imgBox {
+    position: relative;
+    overflow: hidden;
+}
+.container2 .box2 .imgBox img {
+    width: 350px;
+    height: 350px;
+    transition: transform 2s;
+}
+.container2 .box2:hover .imgBox img {
+    transform: scale(1.2);
+}
+.container2 .box2 .details {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,.5);
+   
+    transition: transform .8s;
+
+  transform: rotateY(90deg) translateZ(50px);
+}
+.container2 .box2:hover .details {
+    transform: scaleY(1);
+
+ 
+}
+.container2 .box2 .details .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    
+    color: #fff;
+}
+.container2 .box2 .details .content h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #ff0;
+}
+.container2 .box2 .details .content p {
+    margin: 10px 0 0 ;
+    padding: 0;
+}
+</style>
+<style>
+.social1{
+  background-color: black;
+ 
+
+}
+.socialmd1{
+    height: 80px;
+    position: relative;
+
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+.socialbutton1{
+    background-color: black;
+    margin: 0;  
+    position: absolute;
+    opacity: 1;
+    bottom: 20px;
+    -ms-transform : translate(-50% , -50%);
+    trasform:translate(-50% , -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.fa1 {
+  padding: 10px;
+  font-size: 20px;
+  width: 25px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+
+.fa-facebook1 {
+  background: black;
+  color: white;
+}
+
+.fa-twitter1 {
+  background: black;
+  color: white;
+}
+
+.fa-youtube1 {
+  background: black;
+  color: white;
+}
+
+.fa-instagram1 {
+  background: black;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+  <div id="navbar">
+      <a class="active" href="front_page.html">Home</a>
+      <div class="dropdown2">
+        <button class="dropbtn2" onclick="myFunction2()">Travel Guide
+          <i class=" fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content2" id="myDropdown2">
+          <a href="2-min-summary.html">2 Min Summary</a>
+          <a href="when-to-go.html">When to go</a>
+          <a href="maps&highlights.html">Maps & Highlights</a>
+          <a href="food.html">Food</a>
+          <a href="houseboats.html">Houseboats</a>
+          <a href="spices-and-tea.html">Spices and Tea</a>
+          <a href="Walking.html">Walking</a>
+          <a href="ayurveda.html">Ayurveda</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Destinations
+          <i class=" fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Alleppey.html">Alleppey</a>
+          <a href="kochi.html">Cochin</a>
+          <a href="MUNNAR.HTML">Munnar</a>
+          <a href="trivendram.html">Trivandrum</a>
+          <a href="kozhikhode.html">Kozhikode</a>
+          <a href="wayanad.html">Wayanad</a>
+          <a href="kovalam.html">Kovalam</a>
+          <a href="bekal.html">Bekal</a>
+        </div>
+      </div>
+      <a href="#stories">Stories</a>
+      <a href="contact_us.html">Contact us</a>
+    </div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn2')) {
+  var myDropdown = document.getElementById("myDropdown2");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<div class="back">
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <h2 class="searchbarheading"><span style="font-size:50px;">Explore more to feel alive -</span><span style="font-size:60px">KERALA ROVING</span></h2><br>
+    
+  <br>
+  <div class="topnav1">
+ <div class="search-container">
+    <form action="/action_page.php">
+      <input class="pcs" type="text" size="50" placeholder="What's your next destination..?">
+      <button type="submit">SEARCH</button>
+    </form>
+  </div>
+</div>
+</div>
+
+<div class="parallax"></div>
+
+<section class = "backu">
+ <br><br><br><br>
+
+<div style="background-color:white;font-size:36px ; opacity: 0.3;">
+
+<h1 class="headf" style="opacity:1"> DESTINATIONS </h1>
+</div>
+<div class="parallax"></div>
+ <div class= "container">
+    <div class="box">
+        <div class="imgBox">
+            <img src="https://c1.wallpaperflare.com/preview/600/663/689/houseboat-alleppey-boat-house-boat.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2 style="text-align: center">ALLEPEY</h2>
+                <p style="text-align: center">The Venice of the East</p>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="imgBox">
+            <img src="https://c1.wallpaperflare.com/preview/565/728/32/kochi-chinese-fishing-nets-fishing-nets.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2 style="text-align: center">COCHIN</h2>
+                <p style="text-align: center">The queen of the Arabian sea</p>
+            </div>
+        </div>
+    </div>
+    <div class="box"><div class="imgBox">
+            <img src="https://c1.wallpaperflare.com/preview/523/551/662/nature-healthy-natural-spring.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2 style="text-align: center">MUNNAR</h2>
+                <p style="text-align: center">The kashmir of South India</p>
+            </div>
+        </div></div>
+    <div class="box"><div class="imgBox">
+            <img src="https://keralatourism.travel/images/destinations/headers/trivandrum-kerala-tourism-entry-fee-timings-holidays-reviews-header.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2 style="text-align: center"> THIRUVANANTHAPURAM</h2>
+                <p style="text-align: center">The evergreen city of India</p>
+            </div>
+        </div></div>
+    <div class="box"><div class="imgBox">
+            <img src="https://c1.wallpaperflare.com/preview/179/828/876/beach-sea-arabian-sea-arabian.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2 style="text-align: center">KOZHIKODE</h2>
+                <p>The city of Spices</p>
+            </div>
+        </div></div>
+    <div class="box"><div class="imgBox">
+            <img src="https://keralatourism.travel/images/destinations/headers/wayanad-kerala-tourism-entry-fee-timings-holidays-reviews-header.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2 style="text-align: center">WAYANAD</h2>
+                <p style="text-align: center">The land of Paddy fields</p>
+            </div>
+        </div></div>
+    <div class="box"><div class="imgBox">
+            <img src="https://c0.wallpaperflare.com/preview/671/926/388/india-kovalam.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2 style="text-align: center"> KOVALAM</h2>
+                <p style="text-align: center">The oldest Tourist Enclave in India</p>
+            </div>
+        </div></div>
+    <div class="box"><div class="imgBox">
+            <img src="https://c1.wallpaperflare.com/preview/512/893/286/india-travels-bekal-fort-kerala.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2 style="text-align: center"> BEKAL</h2>
+                <p style="text-align: center">The haven for exotic sights</p>
+            </div>
+        </div></div>
+</div>
+</div><br>
+</section>
+<div style=" opacity: 1">
+  <div class="social">
+      <br>
+      <h1 style= "text-align: center;font-size:30px" >Connect with us on social media </h1>
+      <br>
+    <div class="socialmd">
+      <div class="socialbutton">
+        <a href="www.facebook.com" class="fa fa-facebook"></a>
+        <a href="www.twitter.com" class="fa fa-twitter"></a>
+        <a href="www.youtube.com" class="fa fa-youtube"></a>
+        <a href="www.instagram.com" class="fa fa-instagram"></a>
+      </div>
+    </div>
+  <br>
+  <br>
+  </div>
+</div>
+
+<!--
+<div class="backslide">
+<div class="bg-image img1" >
+  <img src="https://images.unsplash.com/photo-1575305327780-a887f284432f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" alt="image1"  width="100%"/>
+</div>
+<div class="bg-image img2">
+  <img src="https://images.unsplash.com/photo-1604078175342-6d15d9429704?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" alt="image2"  width="100%"/>
+</div>
+<div class="bg-image img3">
+  <img src="https://images.unsplash.com/photo-1595503591560-f4e8c50299e7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" alt="image3"  width="100%"/>
+</div>
+<div class="bg-image img4">
+  <img src="https://static.toiimg.com/photo/61862848.cms" alt="image4"  width="100%"/>
+</div>
+<div class="bg-image img5">
+  <img src="https://images.unsplash.com/photo-1588302079100-80156045403d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1525&q=80" alt="image5" width="100%"/>
+</div>
+<div class="bg-image img6" >
+  <img src="https://images.unsplash.com/photo-1610342160649-0570571a6ae5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjV8fGtlcmFsYSUyMHRvdXJpc218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="image6" width="100%"/>
+</div>
+
+<div class="bg-text">GOD'S OWN COUNTRY</div>
+</div> -->
+<section class = "backu">
+  <br>
+  <br>
+<div style="background-color:white;font-size:36px ; opacity: 0.3;">
+  <h1 class="headf" style="opacity:1"> ACTIVITY </h1>
+    </div>
+  <div class= "container2">
+    <div class="box2">
+        <div class="imgBox">
+            <img src="https://images.unsplash.com/photo-1583482011546-c327a8076798?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjR8fGtlcmFsYSUyMGJhY2t3YXRlcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+        </div>
+        <div class="details">
+            <div class="content">
+               <h2 style="text-align: center">Backwaters</h2>
+                
+            </div>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="imgBox">
+            <img src="https://www.keralatourism.org/images/hri/large/ayurveda_medicines_2.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+              <h2 style="text-align: center">Ayurveda</h2>
+                
+            </div>
+        </div>
+    </div>
+    <div class="box2"><div class="imgBox">
+            <img src="https://media.gettyimages.com/photos/indian-trainees-at-the-pazhassiraja-kalari-academy-in-kanuur-take-in-picture-id962369448?k=6&m=962369448&s=612x612&w=0&h=qLccoH-y-KYDsNnQ780JTfuvP4r7OjOVdWLvDJsxjrs=">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2 style="text-align: center">Art forms</h2>
+                
+            </div>
+        </div></div>
+    <div class="box2"><div class="imgBox">
+            <img src="https://i.ytimg.com/vi/Xna1R9f_0bY/maxresdefault.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2 style="text-align: center">Cuisine</h2>
+                
+            </div>
+        </div></div>
+    <div class="box2"><div class="imgBox">
+            <img src="https://www.keralatourism.org/images/hri/large/river_rafting_614.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+              <h2 style="text-align: center">Water Sports</h2>
+               
+            </div>
+        </div></div>
+    <div class="box2"><div class="imgBox">
+            <img src="https://media.gettyimages.com/photos/maramadi-or-bull-race-locally-known-as-maramadi-bullrace-is-a-post-picture-id176524491?k=6&m=176524491&s=612x612&w=0&h=V1SoYIol-QrL55Wb5h0qLhF05IM9Uh-N7FkYT9pyFdA=">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2 style="text-align: center">Village-Tourism</h2>
+                
+            </div>
+        </div></div>
+    
+</div>
+<br>
+
+  <div class="footer" style="background-color:black ;opacity:0.8">
+    <br>
+    <h1 style= "text-align: center ;color:white ;font-size:30px">ABOUT US<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:0.5">
+      <ul style="color:black">
+        <li><a href="#">TEAM</a></li>
+        <li><a href="#">DEVELOPERS</a></li>
+      </ul>
+    </div>
+    
+    <h1 style= "text-align: center ;color:white ;font-size:30px">SERVICES<h1>
+      <div class="cs6" style="text-align:center;font-size:20px;color:white;opacity:0.5">
+      <ul style="color:black">
+        <li><a href="#">WEB DESIGN</a></li>
+        <li><a href="#">DEVELOPMENT</a></li>
+        <li><a href="#">HOSTING</a></li>
+      </ul>
+    </div>
+    <div class="social1">
+<h1 style= "text-align: center ;color:white;font-size:30px" > FOLLOW US! </h1>
+<div class="socialmd1">
+<div class="socialbutton1">
+<a href="https://www.youtube.com/watch?v=ltxxNidblts" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>
